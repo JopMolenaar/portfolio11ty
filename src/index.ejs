@@ -1,0 +1,134 @@
+---
+layout: base.ejs
+title: My Eleventy Portfolio
+age: age
+---
+
+<main>
+  <section class="hello">
+    <h1>
+      <span class="visually-hidden">Portfolio van </span>Jop Molenaar
+    </h1>
+    <img src="images/Handstand.jpg" alt="" />
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+        <!-- <li><%= title %></li> -->
+        <!-- <li><%= projects.projects %></li> -->
+
+ 
+
+          <% projects.projects.forEach((content) => { %>
+            <li>
+                <button data-project="<%= content.dataName %>">
+                    <div>
+                        <div>
+                            <h3><%= content.name %></h3>
+                            <% if (content.prize) { %>
+                            <div>
+                                <img src="/images/trophy.png" aria-label="<%= content.prize %>" alt="An image of a trophy">
+                                <p><%= content.prize %></p>
+                            </div>
+                            <% } %>
+                        </div>
+                        <p><%- content.projectDescription %></p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                <% content.usedSkills.forEach((skill) => { %>
+                                    <li><%- skill %></li>
+                                <% }); %>
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            <% if (content.linkToRepo) { %>
+                                <a target="_blank" href="<%- content.linkToRepo %>">Github repo</a>
+                            <% } %>
+                            <% if (content.grade) { %>
+                                <p>Grade: <span><%= content.grade %></span></p>
+                            <% } %>
+                            <p><span class="visually-hidden">Date: </span><%= content.date %></p>
+                        </section>
+                    </div>
+                    <img
+                        src="<%= content.img %>"
+                        alt="<%= content.imgAlt %>"
+                    />
+                </button>
+            </li>               
+        <% }); %>
+    </ul>
+  </section>
+           
+  <section class="about">
+    <div>
+        <h2>About me</h2>
+        <section>
+            <h3>Who am I?</h3>
+            <p>
+                Hello I am Jop Molenaar, <%= age.age %> years old and studying Communication and 
+                Multi-Media Design on the HvA. 
+                I am interested in full stack development, IoT
+                and optimizing the UX of the product. I also love to
+                write a lot of logic with Javascript and to learn
+                new things. I can work individually but I also
+                worked many times in a team before and I like the
+                team aspect of helping each other out and making
+                something together. Besides that, I am a very
+                disciplined, calm and nice guy that has a great
+                passion for calisthenics. 
+            </p>
+        </section>
+        <section>
+            <h3 class="visually-hidden">Skills</h3>
+            <div class="scroller">
+                <ul class="scroller_inner">
+                    <li>HTML</li>
+                    <li>CSS/SASS</li>
+                    <li>JS</li>
+                    <li>PHP & SQL</li>
+                    <li>C++</li>
+                    <li>nodeJs</li>
+                    <li>UI/UX</li>
+                </ul>
+            </div>
+            <h3 class="visually-hidden">Soft Skills</h3>
+            <div class="scroller">
+                <ul class="scroller_inner">
+                    <li>Discipline</li>
+                    <li>Stress-resistant</li>
+                    <li>Driven</li>
+                    <li>Trustworthy</li>
+                    <li>Positive</li>
+                    <li>Self-reliant</li>
+                </ul>
+            </div>
+        </section>
+        <!-- <img src="images/strddlePlanche.jpg" alt="" />
+        <img src="images/strddlePlanche.jpg" alt="" /> -->
+        <!-- <section>
+            <h3 class="visually-hidden">
+                Images of me and what I like
+            </h3>
+        </section> -->
+    </div>
+</section>
+<section class="contact">
+    <h2>Contact me: </h2>
+    <p>LinkedIn down below ⬇️</p>
+    <!-- <p>Contact form coming soon! <br> LinkedIn down below ⬇️
+    </p> -->
+    <!-- <form action="" method="">
+        <label for="">Your email: <input required type="email" /></label>
+        <label for="">Subject: <input required type="text" /></label>
+        <label for=""
+            >Message:
+            <textarea required id="" name="" rows="15" cols="33"></textarea>
+        </label>
+        <button type="submit">Send</button>
+    </form>  -->
+</section>
+</main>

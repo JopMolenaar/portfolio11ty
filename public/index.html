@@ -1,14 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Eleventy Site</title>
-</head>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/styles/style.css" rel="stylesheet" />
+        <link href="styles/hello.css" rel="stylesheet" />
+        <link href="styles/projects.css" rel="stylesheet" />
+        <link href="styles/about.css" rel="stylesheet" />
+        <link href="styles/contact.css" rel="stylesheet" />
+        <link href="styles/projectInfo.css" rel="stylesheet" />
+        <link rel="icon" href="images/iconportfoliozwart.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;400&family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;400&family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap");
+        </style>
+        <title>Portfolio Jop Molenaar</title>
+    </head>
 <body>
     <main>
-        <h1>Welcome to My Eleventy Site</h1>
-<p>This is the homepage content.</p>
+        
+<main>
+  <section class="hello">
+    <h1>
+      <span class="visually-hidden">Portfolio van </span>Jop Molenaar
+    </h1>
+    <img src="images/Handstand.jpg" alt="" />
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+        <!-- <li>My Eleventy Portfolio</li> -->
+        <!-- <li>[object Object],[object Object],[object Object],[object Object]</li> -->
+
+ 
+
+          
+            <li>
+                <button data-project="IoT-check-in-system">
+                    <div>
+                        <div>
+                            <h3>IoT check-in system</h3>
+                            
+                        </div>
+                        <p>I made a check in device at my minor Internet of Things on the HBO-ICT. I had no experience with embedded systems and many more things when starting this minor. But I managed to build an embedded system with a website where I could check the data. </p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                
+                                    <li>PHP & MySQL</li>
+                                
+                                    <li>C++</li>
+                                
+                                    <li>HTML, CSS & Javascript</li>
+                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            
+                                <a target="_blank" href="https://github.com/JopMolenaar/IoT-check-in-project">Github repo</a>
+                            
+                            
+                                <p>Grade: <span>8.5</span></p>
+                            
+                            <p><span class="visually-hidden">Date: </span>21-11-2023</p>
+                        </section>
+                    </div>
+                    <img
+                        src="images/indCheckInDevice.png"
+                        alt="A photo of the device I made, it is a gray 3D printed case with an angled side towards you including a little screen, a place to put your card underneath that, a button in the bottom right corner and two leds, red and green, above the screen to show the status of your check in."
+                    />
+                </button>
+            </li>               
+        
+            <li>
+                <button data-project="IoT-check-in-system-for-the-HvA-(Team)">
+                    <div>
+                        <div>
+                            <h3>IoT check-in system for the HvA (Team)</h3>
+                            
+                            <div>
+                                <img src="/images/trophy.png" aria-label="At the end of the 9 weeks we had an expo where we won the `Best business opportunity` out of all projects from all minors and masters at the HBO-ICT." alt="An image of a trophy">
+                                <p>At the end of the 9 weeks we had an expo where we won the `Best business opportunity` out of all projects from all minors and masters at the HBO-ICT.</p>
+                            </div>
+                            
+                        </div>
+                        <p>We made an Internet of Things check-in system that consists out of an embedded system and a web environment for a real client from the HvA. We used a Raspberry Pi 4, esp32, a display, a camera to read the details from the student card and a NFC reader to make checking in and out fast after the first time you have registered your student card. On the website the teachers could link devices to events by linking the event with the mac address of the device. They could see upcoming, open and closed events, they could link student to events, they could see which student is/was present or not at the event, and we build some more nice UX features to meet the users needs. The client was very enthusiast and was planning to use the device next school year.</p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                
+                                    <li>PHP & MySQL</li>
+                                
+                                    <li>C++</li>
+                                
+                                    <li>HTML, CSS & Javascript</li>
+                                
+                                    <li>Scrum</li>
+                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            
+                            
+                                <p>Grade: <span>10</span></p>
+                            
+                            <p><span class="visually-hidden">Date: </span>26-01-2024</p>
+                        </section>
+                    </div>
+                    <img
+                        src="images/IoTTeamEnclosure.JPG"
+                        alt="A photo of the device we made, it is a white 3D printed case with a card slot on the front, a square on the top that is lighten up with blue leds, and an angled screen behind that to show the event details."
+                    />
+                </button>
+            </li>               
+        
+            <li>
+                <button data-project="cssUfo">
+                    <div>
+                        <div>
+                            <h3>CSS only UFO</h3>
+                            
+                        </div>
+                        <p>This project was about learning and discovering the true power of CSS by only using css selectors and no Javascript to see what you can do with it nowadays. I wanted to make a cockpit of an UFO that has working buttons, a working joystick and that you can move through space with different speeds all with css only (accept the js needed for the range input). Be aware that the animation of the UFO moving through space is pretty heavy for your machine, so I advice you to watch it at least on a decent laptop. </p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                
+                                    <li>CSS</li>
+                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            
+                                <a target="_blank" href="https://github.com/JopMolenaar/CSS-cockpit-control">Github repo</a>
+                            
+                            
+                                <p>Grade: <span>9</span></p>
+                            
+                            <p><span class="visually-hidden">Date: </span>20-03-2024</p>
+                        </section>
+                    </div>
+                    <img
+                        src="images/ufoCockpit.webp"
+                        alt=""
+                    />
+                </button>
+            </li>               
+        
+            <li>
+                <button data-project="Calisthenics-workout-generator">
+                    <div>
+                        <div>
+                            <h3>Calisthenics workout generator</h3>
+                            
+                        </div>
+                        <p>I made a workout generator for calisthenics based on your goals and level with vanilla Javascript. I made this project while doing my internship and learned a lot about Javascript.</p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                
+                                    <li>SASS</li>
+                                
+                                    <li>HTML</li>
+                                
+                                    <li>Javascript</li>
+                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            
+                                <a target="_blank" href="https://github.com/JopMolenaar/Calisthenics-skills-workout-generator">Github repo</a>
+                            
+                            
+                            <p><span class="visually-hidden">Date: </span>16-04-2023</p>
+                        </section>
+                    </div>
+                    <img
+                        src="images/caliMockups.png"
+                        alt="Mockups of the calisthenics workout generator website. It consists out of a laptop and mobile phone with the home page on it, and a tablet on the right with the workout plan page."
+                    />
+                </button>
+            </li>               
+        
+    </ul>
+  </section>
+           
+  <section class="about">
+    <div>
+        <h2>About me</h2>
+        <section>
+            <h3>Who am I?</h3>
+            <p>
+                Hello I am Jop Molenaar, 19 years old and studying Communication and 
+                Multi-Media Design on the HvA. 
+                I am interested in full stack development, IoT
+                and optimizing the UX of the product. I also love to
+                write a lot of logic with Javascript and to learn
+                new things. I can work individually but I also
+                worked many times in a team before and I like the
+                team aspect of helping each other out and making
+                something together. Besides that, I am a very
+                disciplined, calm and nice guy that has a great
+                passion for calisthenics. 
+            </p>
+        </section>
+        <section>
+            <h3 class="visually-hidden">Skills</h3>
+            <div class="scroller">
+                <ul class="scroller_inner">
+                    <li>HTML</li>
+                    <li>CSS/SASS</li>
+                    <li>JS</li>
+                    <li>PHP & SQL</li>
+                    <li>C++</li>
+                    <li>nodeJs</li>
+                    <li>UI/UX</li>
+                </ul>
+            </div>
+            <h3 class="visually-hidden">Soft Skills</h3>
+            <div class="scroller">
+                <ul class="scroller_inner">
+                    <li>Discipline</li>
+                    <li>Stress-resistant</li>
+                    <li>Driven</li>
+                    <li>Trustworthy</li>
+                    <li>Positive</li>
+                    <li>Self-reliant</li>
+                </ul>
+            </div>
+        </section>
+        <!-- <img src="images/strddlePlanche.jpg" alt="" />
+        <img src="images/strddlePlanche.jpg" alt="" /> -->
+        <!-- <section>
+            <h3 class="visually-hidden">
+                Images of me and what I like
+            </h3>
+        </section> -->
+    </div>
+</section>
+<section class="contact">
+    <h2>Contact me: </h2>
+    <p>LinkedIn down below ⬇️</p>
+    <!-- <p>Contact form coming soon! <br> LinkedIn down below ⬇️
+    </p> -->
+    <!-- <form action="" method="">
+        <label for="">Your email: <input required type="email" /></label>
+        <label for="">Subject: <input required type="text" /></label>
+        <label for=""
+            >Message:
+            <textarea required id="" name="" rows="15" cols="33"></textarea>
+        </label>
+        <button type="submit">Send</button>
+    </form>  -->
+</section>
+</main>
 
     </main>
 </body>

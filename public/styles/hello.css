@@ -1,0 +1,74 @@
+main > section:first-of-type {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > section:first-of-type h1 {
+  color: var(--color-text);
+  width: 100%;
+  text-align: center;
+  font-weight: 200;
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main > section:first-of-type img {
+  width: 100vw;
+  height: 100svh;
+  transform-origin: bottom;
+  object-fit: cover;
+  opacity: 1;
+  order: -1;
+  mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
+  -webkit-mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
+}
+
+@media (min-width: 57em) {
+  main > section:first-of-type img {
+    width: auto;
+    mask-image: radial-gradient(circle, var(--background-color) 20%, var(--transparent) 66%);
+    -webkit-mask-image: radial-gradient(circle, var(--background-color) 20%, var(--transparent) 65%);
+  }
+}
+@media (min-width: 75em) {
+  main > section:first-of-type {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+  }
+  main > section:first-of-type h1 {
+    transform: translate(-70%, -50%);
+  }
+  main > section:first-of-type img {
+    transform: translate(25%, 0%);
+  }
+}
+@supports (animation-timeline: view()) {
+  main > section:first-of-type h1 {
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -400px;
+  }
+  main > section:first-of-type img {
+    animation: header-image-fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: exit -400px;
+  }
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes header-image-fade-out {
+    25% {
+      scale: 1;
+    }
+    85%, 100% {
+      opacity: 0;
+      scale: 1.4;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[
+    {
+        "dataName": "IoT-check-in-system",
+        "name": "IoT check-in system",
+        "descLink": "https://raw.githubusercontent.com/JopMolenaar/IoT-check-in-project/main/README.md",
+        "linkToRepo": "https://github.com/JopMolenaar/IoT-check-in-project",
+        "linkToWebsite": "",
+        "images": ["images/indCheckInDevice.png"],
+        "usedSkills": ["PHP & MySQL", "C++", "HTML, CSS & Javascript"],
+        "grade": "8.5",
+        "date": "21-11-2023",
+        "img": "images/indCheckInDevice.png",
+        "imgAlt": "A photo of the device I made, it is a gray 3D printed case with an angled side towards you including a little screen, a place to put your card underneath that, a button in the bottom right corner and two leds, red and green, above the screen to show the status of your check in.",
+        "littleDesc": "I made a check in device at my minor Internet of Things on the HBO-ICT. I had no experience with embedded systems and many more things when starting this minor. But I managed to build an embedded system with a website where I could check the data. "
+    },
+    {
+        "dataName": "IoT-check-in-system-for-the-HvA-(Team)",
+        "name": "IoT check-in system for the HvA (Team)",
+        "descLink": "",
+        "linkToRepo": "",
+        "linkToWebsite": "",
+        "images": ["images/IoTTeamEnclosure.JPG"],
+        "usedSkills": ["PHP & MySQL", "C++", "HTML, CSS & Javascript", "Scrum"],
+        "grade": "10",
+        "date": "26-01-2024",
+        "img": "images/IoTTeamEnclosure.JPG",
+        "imgAlt": "A photo of the device we made, it is a white 3D printed case with a card slot on the front, a square on the top that is lighten up with blue leds, and an angled screen behind that to show the event details.",
+        "littleDesc": "We made an Internet of Things check-in system that consists out of an embedded system and a web environment for a real client from the HvA. We used a Raspberry Pi 4, esp32, a display, a camera to read the details from the student card and a NFC reader to make checking in and out fast after the first time you have registered your student card. On the website the teachers could link devices to events by linking the event with the mac address of the device. They could see upcoming, open and closed events, they could link student to events, they could see which student is/was present or not at the event, and we build some more nice UX features to meet the users needs. The client was very enthusiast and was planning to use the device next school year.",
+        "prize": "At the end of the 9 weeks we had an expo where we won the `Best business opportunity` out of all projects from all minors and masters at the HBO-ICT."
+    },
+    {
+        "dataName": "cssUfo",
+        "name": "CSS only UFO",
+        "descLink": "https://jopmolenaar.github.io/CSS-cockpit-control/README.md",
+        "linkToRepo": "https://github.com/JopMolenaar/CSS-cockpit-control",
+        "linkToWebsite": "https://jopmolenaar.github.io/CSS-cockpit-control/",
+        "images": ["images/ufoCockpit.webp"],
+        "usedSkills": ["CSS"],
+        "grade": "9",
+        "date": "20-03-2024",
+        "img": "images/ufoCockpit.webp",
+        "imgAlt": "",
+        "littleDesc": "This project was about learning and discovering the true power of CSS by only using css selectors and no Javascript."
+    },
+    {
+        "dataName": "Calisthenics-workout-generator",
+        "name": "Calisthenics workout generator",
+        "descLink": "https://jopmolenaar.github.io/Calisthenics-skills-workout-generator/README.md",
+        "linkToRepo": "https://github.com/JopMolenaar/Calisthenics-skills-workout-generator",
+        "linkToWebsite": "https://jopmolenaar.github.io/calisthenics-skills-workout-generator/",
+        "images": ["images/caliMockups.png"],
+        "usedSkills": ["SASS", "HTML", "Javascript"],
+        "date": "16-04-2023",
+        "img": "images/caliMockups.png",
+        "imgAlt": "Mockups of the calisthenics workout generator website. It consists out of a laptop and mobile phone with the home page on it, and a tablet on the right with the workout plan page.",
+        "littleDesc": "I made a workout generator for calisthenics based on your goals and level with vanilla Javascript. I made this project while doing my internship and learned a lot about Javascript."
+    }
+]
