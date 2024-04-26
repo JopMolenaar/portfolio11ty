@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
     // Copy static assets (like images and CSS)
     eleventyConfig.addPassthroughCopy("src/images");
     eleventyConfig.addPassthroughCopy("src/styles");
+    eleventyConfig.addPassthroughCopy("src/js");
 
     // // Add data files directory
     // eleventyConfig.addCollection("projects", async function (collectionApi) {
@@ -12,7 +13,7 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "public",
+            output: "docs",
             includes: "_includes",
         },
         markdownTemplateEngine: "ejs", // Use EJS for Markdown files
