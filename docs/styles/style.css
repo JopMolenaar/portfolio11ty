@@ -67,6 +67,12 @@ body {
   background-color: var(--background-color);
 }
 
+html:has(a:hover) .blob {
+  transition: 200ms;
+  opacity: 0;
+  
+}
+
 body > .blob {
   display: none;
   pointer-events: none;
@@ -74,6 +80,7 @@ body > .blob {
   background-color: rgb(214, 214, 214);
   border-radius: 50%;
   z-index: 80;
+
 }
 
 body .blob:nth-of-type(1) {
