@@ -39,20 +39,21 @@
         "grade": "9",
         "date": "20-03-2024",
         "img": "images/ufoCockpit.webp",
-        "imgAlt": "",
+        "imgAlt": "A picture of the website that looks like that you are in a UFO in space.",
         "littleDesc": "This project was about learning and discovering the true power of CSS by only using css selectors and no Javascript."
     },
     {
-        "dataName": "Calisthenics-workout-generator",
-        "name": "Calisthenics workout generator",
-        "descLink": "https://jopmolenaar.github.io/Calisthenics-skills-workout-generator/README.md",
-        "linkToRepo": "https://github.com/JopMolenaar/Calisthenics-skills-workout-generator",
-        "linkToWebsite": "https://jopmolenaar.github.io/calisthenics-skills-workout-generator/",
-        "images": ["images/caliMockups.png"],
-        "usedSkills": ["SASS", "HTML", "Javascript"],
-        "date": "16-04-2023",
-        "img": "images/caliMockups.png",
-        "imgAlt": "Mockups of the calisthenics workout generator website. It consists out of a laptop and mobile phone with the home page on it, and a tablet on the right with the workout plan page.",
-        "littleDesc": "I made a workout generator for calisthenics based on your goals and level with vanilla Javascript. I made this project while doing my internship and learned a lot about Javascript."
+        "dataName": "cssDayTa",
+        "name": "10 years of CSS day",
+        "descLink": "https://raw.githubusercontent.com/JopMolenaar/css-day-ta-JJJM/main/README.md",
+        "linkToRepo": "https://github.com/JopMolenaar/css-day-ta-JJJM",
+        "linkToWebsite": "https://jopmolenaar.github.io/css-day-ta-JJJM/",
+        "images": ["images/cssDayTaWebsite.webp"],
+        "usedSkills": ["accessible html", "CSS", "Javascript"],
+        "date": "28-03-2024",
+        "img": "images/cssDayTaMockup.webp",
+        "imgAlt": "A picture of the website on three different devices.",
+        "littleDesc": "",
+        "prize": "This website is made in a hackathon where we competed against other groups. The judges were Peter Paul Koch and Krijn Hoetmer. Ultimately, our team won the hackathon, earning free tickets to CSS Day along with another group."
     }
 ]
