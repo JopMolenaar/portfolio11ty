@@ -37,49 +37,11 @@
     <h2>Projects</h2>
     <ul>
         <!-- <li>My Eleventy Portfolio</li> -->
-        <!-- <li>[object Object],[object Object],[object Object],[object Object]</li> -->
+        <!-- <li>[object Object],[object Object],[object Object],[object Object],[object Object]</li> -->
 
  
 
           
-            <li>
-                <button data-project="IoT-check-in-system">
-                    <div>
-                        <div>
-                            <h3>IoT check-in system</h3>
-                            
-                        </div>
-                        <p>I made a check in device at my minor Internet of Things on the HBO-ICT. I had no experience with embedded systems and many more things when starting this minor. But I managed to build an embedded system with a website where I could check the data. </p>
-                        <section>
-                            <h4 class="visually-hidden">Skills used:</h4>
-                            <ul>
-                                
-                                    <li>PHP & MySQL</li>
-                                
-                                    <li>C++</li>
-                                
-                                    <li>HTML, CSS & Javascript</li>
-                                
-                            </ul>
-                        </section>
-                        <section>
-                            <h4 class="visually-hidden">More info:</h4>
-                            
-                                <a target="_blank" href="https://github.com/JopMolenaar/IoT-check-in-project">Github repo</a>
-                            
-                            
-                                <p>Grade: <span>8.5</span></p>
-                            
-                            <p><span class="visually-hidden">Date: </span>21-11-2023</p>
-                        </section>
-                    </div>
-                    <img
-                        src="images/indCheckInDevice.png"
-                        alt="A photo of the device I made, it is a gray 3D printed case with an angled side towards you including a little screen, a place to put your card underneath that, a button in the bottom right corner and two leds, red and green, above the screen to show the status of your check in."
-                    />
-                </button>
-            </li>               
-        
             <li>
                 <button data-project="IoT-check-in-system-for-the-HvA-(Team)">
                     <div>
@@ -92,7 +54,7 @@
                             </div>
                             
                         </div>
-                        <p>We made an Internet of Things check-in system that consists out of an embedded system and a web environment for a real client from the HvA. We used a Raspberry Pi 4, esp32, a display, a camera to read the details from the student card and a NFC reader to make checking in and out fast after the first time you have registered your student card. On the website the teachers could link devices to events by linking the event with the mac address of the device. They could see upcoming, open and closed events, they could link student to events, they could see which student is/was present or not at the event, and we build some more nice UX features to meet the users needs. The client was very enthusiast and was planning to use the device next school year.</p>
+                        <p>We made an Internet of Things check-in system that consists out of an embedded system and a web environment for a real client from the HvA. We used a Raspberry Pi 4, esp32, a display, a camera to read the details from the student card and a NFC reader to make checking in and out fast after the first time you have registered your student card. On the website the teachers could link devices to events by linking the event with the mac address of the device. They could see upcoming, open and closed events, they could link student to events, they could see which student is/was present or not at the event, and we build some more nice UX features to meet the users needs. The client was very enthusiastic and was planning to use the device next school year.</p>
                         <section>
                             <h4 class="visually-hidden">Skills used:</h4>
                             <ul>
@@ -117,7 +79,7 @@
                         </section>
                     </div>
                     <img
-                        src="images/IoTTeamEnclosure.JPG"
+                        src="images/enclosureWithWebsite.webp"
                         alt="A photo of the device we made, it is a white 3D printed case with a card slot on the front, a square on the top that is lighten up with blue leds, and an angled screen behind that to show the event details."
                     />
                 </button>
@@ -198,6 +160,84 @@
                 </button>
             </li>               
         
+            <li>
+                <button data-project="chatPWebApp">
+                    <div>
+                        <div>
+                            <h3>Chat PWA</h3>
+                            
+                        </div>
+                        <p>In this project which involved using APIs, and discovering features of the web you didn&#39;t know before, I made a chat app like WhatsApp and other messaging apps. I build the application with node.js, Javascript, Liquid and css. I used server send events to let the receiver get the texts, idle detection to know if the user is active or not and I worked with service workers to be able to install the PWA and to use the push notifications api to send notifications to the user if he is not online. I tried some experimental things during this project and one of them is that I did not set up a database. I stored the messages on the server in the beginning. After a while I used <code>fs</code> to store them in a json file instead of the server. But render, the service where I have put my webapp online, resets the content of these files when the server restarts. And because I didn&#39;t wanted to set up a database, I thought of something different. I made a private github repository, generated an access token, and now I store and get the data from my own github api/database. </p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                
+                                    <li>Service workers</li>
+                                
+                                    <li>Node.js</li>
+                                
+                                    <li>Javascript & CSS</li>
+                                
+                                    <li>Liquid</li>
+                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            
+                                <a target="_blank" href="https://github.com/JopMolenaar/API-JopMolenaar">Github repo</a>
+                            
+                            
+                                <p>Grade: <span>9</span></p>
+                            
+                            <p><span class="visually-hidden">Date: </span>26-04-2024</p>
+                        </section>
+                    </div>
+                    <img
+                        src="images/pwaChat.webp"
+                        alt=""
+                    />
+                </button>
+            </li>               
+        
+            <li>
+                <button data-project="IoT-check-in-system">
+                    <div>
+                        <div>
+                            <h3>IoT check-in system</h3>
+                            
+                        </div>
+                        <p>I made a check in device at my minor Internet of Things on the HBO-ICT. I had no experience with embedded systems and many more things when starting this minor. But I managed to build an embedded system with a website where I could check the data. </p>
+                        <section>
+                            <h4 class="visually-hidden">Skills used:</h4>
+                            <ul>
+                                
+                                    <li>PHP & MySQL</li>
+                                
+                                    <li>C++</li>
+                                
+                                    <li>HTML, CSS & Javascript</li>
+                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h4 class="visually-hidden">More info:</h4>
+                            
+                                <a target="_blank" href="https://github.com/JopMolenaar/IoT-check-in-project">Github repo</a>
+                            
+                            
+                                <p>Grade: <span>8.5</span></p>
+                            
+                            <p><span class="visually-hidden">Date: </span>21-11-2023</p>
+                        </section>
+                    </div>
+                    <img
+                        src="images/indCheckInDevice.png"
+                        alt="A photo of the device I made, it is a gray 3D printed case with an angled side towards you including a little screen, a place to put your card underneath that, a button in the bottom right corner and two leds, red and green, above the screen to show the status of your check in."
+                    />
+                </button>
+            </li>               
+        
     </ul>
   </section>
            
@@ -231,6 +271,7 @@
                     <li>C++</li>
                     <li>nodeJs</li>
                     <li>UI/UX</li>
+                    <li>service workers</li>
                 </ul>
             </div>
             <h3 class="visually-hidden">Soft Skills</h3>
