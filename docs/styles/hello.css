@@ -33,6 +33,7 @@ main .hello {
       padding-inline: 1.5em;  
       & p {
         transform: translateY(-0.97em);
+        text-transform: capitalize;
       }
   }
 
