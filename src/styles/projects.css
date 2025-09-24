@@ -4,6 +4,7 @@ main > section:nth-of-type(2) {
   align-items: center;
   height: fit-content;
   padding: 1.5em;
+  background-color: var(--background-color);
 }
 main > section:nth-of-type(2) h2 {
   padding: 1.5rem;

@@ -73,6 +73,31 @@ html:has(a:hover) .blob {
   
 }
 
+header {
+  width: 100%;
+  padding: 1em;
+  z-index: 90;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  & nav {
+    display: flex;
+    gap: 2em;
+      & li {
+        list-style: none;
+        & a {
+          text-decoration: none;
+          color: black;
+          /* mix-blend-mode: exclusion; */
+          font-size: 1.2em;
+          font-weight: 700;
+        }
+      }
+  }
+}
+
 body > .blob {
   display: none;
   pointer-events: none;

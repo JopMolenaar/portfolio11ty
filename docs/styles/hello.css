@@ -1,11 +1,54 @@
-main > section:first-of-type {
-  position: relative;
+main .hello {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: end;
+  height: 80vh;
+
+  & h1 {
+    order: -1;
+    width: 50vw;
+    height: 0.94em;
+    background-color: var(--background-color);
+    mix-blend-mode: darken;
+    font-size: 4.5em;
+    padding-inline: 0.8em;
+    .transparent {
+      position: absolute;
+      color: rgb(255, 255, 255); 
+      mix-blend-mode: difference;
+      transform: translateY(-16.7%);
+    }
+  }
+
+  & div {
+      background-color: var(--background-color);
+      color: var(--background-color);
+      font-weight: 700;
+      display: flex;
+      justify-content: end;
+      position: relative;
+      width: 50vw;
+      align-self: end;    
+      height: 2.22em;
+      font-size: 1.9em;
+      padding-inline: 1.5em;  
+      & p {
+        transform: translateY(-0.97em);
+      }
+  }
+
+  & img {
+      position: fixed;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+  }
 }
+
+
 main > section:first-of-type h1 {
-  color: var(--color-text);
+  /* color: var(--color-text);
   width: 100%;
   text-align: center;
   font-weight: 200;
@@ -13,19 +56,19 @@ main > section:first-of-type h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 main > section:first-of-type img {
   width: 100vw;
-  height: 100svh;
+  height: 80vh;
   transform-origin: bottom;
   object-fit: cover;
   opacity: 1;
   order: -1;
-  mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
-  -webkit-mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
+  /* mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
+  -webkit-mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%); */
 }
-
+/* 
 @media (min-width: 57em) {
   main > section:first-of-type img {
     width: auto;
@@ -71,4 +114,4 @@ main > section:first-of-type img {
       scale: 1.4;
     }
   }
-}
+} */
