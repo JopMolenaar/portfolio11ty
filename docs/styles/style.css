@@ -90,13 +90,14 @@ header {
         & a {
           text-decoration: none;
           color: black;
-          /* mix-blend-mode: exclusion; */
+          /* TODO CHANGE THIS COLOR TO WHITE WHEN ITS ABOVE THE BLACK SECTIONS */
           font-size: 1.2em;
           font-weight: 700;
         }
       }
   }
 }
+
 
 body > .blob {
   display: none;
