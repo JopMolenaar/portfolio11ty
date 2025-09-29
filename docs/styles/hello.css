@@ -15,7 +15,7 @@ main .hello {
       position: absolute;
       color: rgb(255, 255, 255); 
       mix-blend-mode: difference;
-      transform: translateY(-16.7%);
+      transform: translateY(-15px);
     }
   }
 
