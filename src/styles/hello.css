@@ -24,7 +24,7 @@ main .hello {
 
   & div {
       background-color: var(--background-color);
-      color: #c8cadf;
+      color: #ffffff;
       text-shadow: -2px -2px 2px rgba(255,255,255,.1), 2px 2px 2px rgba(0,0,0,.5);      
       font-weight: 700;
       display: flex;

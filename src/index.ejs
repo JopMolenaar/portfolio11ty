@@ -20,26 +20,38 @@ age: age
 
 <main>
   <section class="hello">
- 
+
         <h1>
             <span class="visually-hidden">Portfolio van </span><span class="transparent">Jop Molenaar</span>
         </h1>
         <div>
-            <!-- Black div -->
-            <p>Looking for a job as a frontend-dev</p>
+            <!-- <p>Looking for a job as a frontend-dev</p> -->
         </div>
 
   
-    <img src="images/headerpic.png" alt="" />
+    <img src="images/headerpic5.png" alt="" />
+  </section>
+
+  <section id="aboutMe">
+    <h2>Who am I?</h2>
+    <p>
+        Hello I am Jop Molenaar, <%= age.age %> years old and studying Communication and 
+        Multi-Media Design on the HvA. 
+        I am interested in full stack development, IoT
+        and optimizing the UX of the product. I also love to
+        write a lot of logic with Javascript and to learn
+        new things. I can work individually but I also
+        worked many times in a team before and I like the
+        team aspect of helping each other out and making
+        something together. Besides that, I am a very
+        disciplined, calm and nice guy that has a great
+        passion for calisthenics. 
+    </p>
   </section>
 
   <section class="projects">
     <h2>Projects</h2>
     <ul>
-        <!-- <li><%= title %></li> -->
-        <!-- <li><%= projects.projects %></li> -->
-
- 
 
           <% projects.projects.forEach((content) => { %>
             <li>
@@ -84,27 +96,12 @@ age: age
     </ul>
   </section>
            
-  <section class="about">
+  <section class="skills">
     <div>
-        <h2>About me</h2>
+        <h2>Skills</h2>
+       <!-- Hier iets anders op verzinnen dan de scroll -->
         <section>
-            <h3>Who am I?</h3>
-            <p>
-                Hello I am Jop Molenaar, <%= age.age %> years old and studying Communication and 
-                Multi-Media Design on the HvA. 
-                I am interested in full stack development, IoT
-                and optimizing the UX of the product. I also love to
-                write a lot of logic with Javascript and to learn
-                new things. I can work individually but I also
-                worked many times in a team before and I like the
-                team aspect of helping each other out and making
-                something together. Besides that, I am a very
-                disciplined, calm and nice guy that has a great
-                passion for calisthenics. 
-            </p>
-        </section>
-        <section>
-            <h3 class="visually-hidden">Skills</h3>
+            <h3 class="visually-hidden">Hard skills</h3>
             <div class="scroller">
                 <ul class="scroller_inner">
                     <li>HTML</li>
@@ -117,7 +114,7 @@ age: age
                     <li>service workers</li>
                 </ul>
             </div>
-            <h3 class="visually-hidden">Soft Skills</h3>
+            <h3 class="visually-hidden">Soft skills</h3>
             <div class="scroller">
                 <ul class="scroller_inner">
                     <li>Discipline</li>
@@ -129,17 +126,11 @@ age: age
                 </ul>
             </div>
         </section>
-        <!-- <img src="images/strddlePlanche.jpg" alt="" />
-        <img src="images/strddlePlanche.jpg" alt="" /> -->
-        <!-- <section>
-            <h3 class="visually-hidden">
-                Images of me and what I like
-            </h3>
-        </section> -->
     </div>
 </section>
 <section class="contact">
     <h2>Contact me: </h2>
+    <!-- Contact form -->
     <p>LinkedIn down below ⬇️</p>
     <!-- <p>Contact form coming soon! <br> LinkedIn down below ⬇️
     </p> -->
