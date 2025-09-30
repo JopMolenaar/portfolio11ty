@@ -1,3 +1,73 @@
 #aboutMe {
   background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 7fr 10fr;
+  height: fit-content;
+  padding: 3.5rem;
+  padding-top: 6em;
+  gap: 2em;
+
+  & h2 {
+    /* padding-block: 1.5rem; */
+    font-size: 10em;
+    color: rgb(97, 111, 158);
+    position: absolute;
+    transform: rotate(-10deg);
+    opacity: 0.3;
+  }
+  & p {
+    display: inline-block;
+    max-width: 40em;
+    font-size: 1.2em;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  img {
+    width: 8em;
+    height: auto;
+
+    /* TODO random factor in where they are and how they are rotated */
+    &:nth-of-type(1) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      align-self: end;
+      justify-self: center;
+      transform: rotate(10deg);
+    }
+
+    &:nth-of-type(2) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      align-self: start;
+      justify-self: start;
+      transform: rotate(10deg);
+    }
+
+    &:nth-of-type(3) {
+      grid-column: 4/5;
+      grid-row: 1/2;
+      align-self: end;
+      justify-self: start;
+      transform: rotate(-5deg);
+    }
+
+    &:nth-of-type(4) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      align-self: center;
+      justify-self: end;
+      transform: rotate(30deg);
+    }
+
+    &:nth-of-type(5) {
+      grid-column: 4/5;
+      grid-row: 2/3;
+      align-self: end;
+      justify-self: center;
+      transform: rotate(-10deg);
+    }
+  }
 }
+
+

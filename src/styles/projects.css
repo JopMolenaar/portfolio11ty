@@ -3,13 +3,17 @@ main > section.projects {
   flex-direction: column;
   align-items: center;
   height: fit-content;
-  padding: 1.5em;
+  padding: 3.5rem;
+  padding-top: 9em;
   background-color: var(--background-color);
 
   h2 {
-    padding: 1.5rem;
-    font-size: 2em;
-    color: var(--color-text);
+    font-size: 10em;
+    color: rgb(97, 111, 158);
+    position: absolute;
+    transform: rotate(15deg);
+    align-self: end;
+    opacity: 0.4
   }
 
   > ul {
