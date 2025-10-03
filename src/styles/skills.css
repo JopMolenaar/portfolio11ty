@@ -2,21 +2,20 @@ main {
   > section.skills {
     position: relative;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--background-color);
     padding-block: 3em;
+    padding-top: 8em;
 
-    div {
-      width: 100%;
+    div:nth-of-type(2) {
       display: grid;
       padding-top: 3em;
       padding: 1em;
       grid-template-columns: 1fr;
-      grid-template-rows: 8em fit-content 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       position: relative;
 
-      h2 {
+      h3 {
         color: var(--color-text);
         grid-column-start: 1;
         grid-column-end: 3;
@@ -47,7 +46,7 @@ main {
         transform: rotate(-16deg) translate(0%,0%);
         transform-origin: center;
 
-        h3 {
+        h4 {
           color: var(--color-text);
           margin-bottom: 1em;
         }
@@ -148,7 +147,7 @@ main {
         grid-template-columns: 1fr minmax(20em, 40em) 1fr;
         grid-template-rows: 8em 1fr 9em;
 
-        h2 {
+        h3 {
           grid-column-start: 1;
           grid-column-end: 4;
           grid-row-start: 1;

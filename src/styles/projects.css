@@ -10,9 +10,9 @@ main > section.projects {
   h2 {
     font-size: 10em;
     color: rgb(97, 111, 158);
-    position: absolute;
-    transform: rotate(15deg);
-    align-self: end;
+    /* position: absolute; */
+    transform: rotate(5deg);
+    align-self: center;
     opacity: 0.4
   }
 
