@@ -98,7 +98,6 @@ header {
   }
 }
 
-
 body > .blob {
   display: none;
   pointer-events: none;
