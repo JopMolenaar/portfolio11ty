@@ -62,7 +62,7 @@ main .hello {
       width: 50vw;
     }
     & div {
-display: flex;
+      display: flex;
     }
     & img {
 
