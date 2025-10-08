@@ -29,7 +29,7 @@ let cursorOffsetY = 0;
 
 
 // Decide the color of the nav elements
-const target = document.getElementById("checkTopDiv");
+const target = document.querySelector("h1");
 const header = document.querySelector("body header");
 
 window.addEventListener("scroll", () => {
