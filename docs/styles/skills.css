@@ -30,7 +30,7 @@ main {
                         text-decoration: none;
                         scale: 1.05;
                     }
-                    img {
+                    svg {
                         width: 1.2em;
                         height: auto;
                         filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
@@ -59,7 +59,7 @@ main {
                     place-self: center;
                     transform: rotate(16deg);
                     font-size: 27vw;
-                    color: rgb(204, 204, 255);
+                    color: #c2dede;
                     opacity: 0.5;
                     transform-origin: center;
                 }
