@@ -10,8 +10,8 @@ main .hello {
         background-color: var(--background-color);
         mix-blend-mode: darken;
         font-size: 11vw;
+        padding-left: 2rem;
         display: flex;
-        justify-content: center;
         padding-bottom: 0.5em;
         .transparent {
             position: absolute;
@@ -60,9 +60,18 @@ main .hello {
             font-size: 4.5em;
             min-width: 8em;
             width: 50vw;
+            padding-left: 2rem;
         }
         & div {
             display: flex;
+        }
+    }
+}
+
+@media (min-width: 1287px) {
+    main .hello {
+        & h1 {
+            justify-content: center;
         }
     }
 }

@@ -19,7 +19,7 @@
         transform: rotate(-5deg);
         opacity: 1;
         align-self: center;
-        justify-self: center;
+        justify-self: start;
         text-wrap: nowrap;
         /* opacity: 0.7; */
     }
@@ -115,6 +115,7 @@
             grid-column: 1 / 3;
             transform: rotate(-10deg);
             font-size: calc(6em + 2vw);
+            justify-self: center;
         }
         p {
             max-width: 40em;
@@ -130,7 +131,7 @@
             margin-bottom: 0;
 
             &:nth-of-type(1) {
-                grid-column: var(--img1-col, 1/2);
+                grid-column: var(--img1-col, 4/5);
                 grid-row: var(--img1-row, 2/3);
                 align-self: var(--img1-align, end);
                 justify-self: var(--img1-justify, center);
