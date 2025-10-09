@@ -17,11 +17,9 @@
         font-size: calc(1em + 10vw);
         grid-column: 1/2;
         transform: rotate(-5deg);
-        opacity: 1;
         align-self: center;
         justify-self: start;
         text-wrap: nowrap;
-        /* opacity: 0.7; */
     }
     p {
         display: inline-block;

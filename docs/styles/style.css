@@ -192,13 +192,18 @@ footer div {
 footer div a {
   width: fit-content;
 }
-footer div a img {
-  width: 1.8em;
-  filter: invert(100%);
-  transition: 200ms;
+footer div a {
+  img, svg {
+    width: 1.8em;
+    filter: invert(100%);
+    transition: 200ms;
+    height: auto;
+  }
 }
-footer div a:hover img {
-  scale: 1.1;
+footer div a:hover {
+  img, svg {
+    scale: 1.1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
