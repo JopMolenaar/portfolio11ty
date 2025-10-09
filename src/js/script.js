@@ -107,4 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
             img.style.setProperty(`--img${index}-justify`, justify);
         });
     }
+
+// TODO REMOVE THIS
+    console.log(window.scrollY);
+    
+    // Check if the page is not scrolled on, if so, add the loading class
+    if(window.scrollY === 0){  
+        document.body.classList.add("loading");
+    } else {
+        document.body.classList.remove("loading");
+    }
 });

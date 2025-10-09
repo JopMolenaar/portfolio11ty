@@ -59,8 +59,8 @@ main .hello {
         & h1 {
             font-size: 4.5em;
             min-width: 8em;
-            width: 50vw;
-            padding-left: 2rem;
+            width: 100vw;
+            /* padding-left: 0.72em; */
         }
         & div {
             display: flex;
@@ -71,7 +71,8 @@ main .hello {
 @media (min-width: 1287px) {
     main .hello {
         & h1 {
-            justify-content: center;
+            padding-left: 3.5rem;
+            /* justify-content: center; */
         }
     }
 }

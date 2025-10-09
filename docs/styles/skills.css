@@ -99,7 +99,7 @@ main {
                             transform-style: preserve-3d;
 
                             li {
-                                background-color: rgb(70, 70, 70);
+                                background-color: rgb(70 70 70 / 68%);
                                 border-radius: 10%;
                                 width: fit-content;
                                 padding: 0.5em;
