@@ -221,6 +221,7 @@ body.loading {
   header {
     opacity: 0;
     /* TODO animate loading in one by one */
+    animation: slideIn 1.5s forwards; 
   }
   main section:not(.hello){
     opacity: 0;
@@ -230,6 +231,16 @@ body.loading {
     h1 {
       animation: slideDown 1.5s forwards; 
     }
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 

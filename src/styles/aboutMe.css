@@ -114,7 +114,7 @@
             grid-column: 1 / 3;
             transform: rotate(-10deg);
             font-size: calc(6em + 2vw);
-            justify-self: center;
+            justify-self: start;
         }
         p {
             max-width: 40em;
@@ -162,7 +162,7 @@
                 grid-column: 1/2;
                 grid-row: 2/3;
                 align-self: center;
-                justify-self: center;
+                justify-self: start;
                 transform: rotate(8deg);
             }
             &:hover {

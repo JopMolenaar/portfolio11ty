@@ -13,15 +13,15 @@ main .hello {
         justify-content: end;
         position: relative;
         align-self: end;
+        padding-inline: 2rem;
     }
-    & h1 {
+    h1 {
         order: -1;
         width: 100%;
         max-width: 110rem;
         margin: 0 auto;
         height: 1.44em;
         font-size: 11vw;
-        padding-left: 2rem;
         display: flex;
         padding-bottom: 0.5em;
         .transparent {
@@ -42,6 +42,7 @@ main .hello {
         order: -1;
         z-index: -1;
         filter: brightness(1.13);
+        top: -2px;
     }
 }
 
@@ -51,7 +52,6 @@ main .hello {
             font-size: 4.5em;
             min-width: 8em;
             width: 100vw;
-            /* padding-left: 0.72em; */
         }
         & div {
             display: flex;
@@ -61,9 +61,8 @@ main .hello {
 
 @media (min-width: 1287px) {
     main .hello {
-        & h1 {
-            padding-left: 3.5rem;
-            /* justify-content: center; */
+        > div {
+            padding-inline: 3.5rem;
         }
     }
 }
