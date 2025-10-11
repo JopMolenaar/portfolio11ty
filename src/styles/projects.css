@@ -13,6 +13,9 @@ main > section.projects {
         transform: rotate(-2deg);
         align-self: start;
         opacity: 0.8;
+        max-width: 110rem;
+        margin: 0 auto;
+        width: 100%;
     }
 
     > ul {
@@ -20,7 +23,7 @@ main > section.projects {
         flex-direction: column;
         gap: 2em;
         width: 100%;
-        /* max-width: 70em; */
+        max-width: 110rem;
         > li {
             padding: 0em;
             list-style: none;
@@ -216,6 +219,9 @@ main > section.projects {
 @media (min-width: 1287px) {
     main > section.projects {
         padding-inline: 3.5rem;
+        h2 {
+            font-size: calc(6em + 2vw);
+        }
         > ul > li {
             font-size: calc(1em + 0.2vw);
         }

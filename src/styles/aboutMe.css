@@ -1,15 +1,16 @@
 #aboutMe {
     background-color: var(--background-color);
+    padding: 2rem;
+    padding-top: 3em;
 
     div {
         display: flex;
         flex-wrap: wrap;
         height: fit-content;
-        padding: 2rem;
-        padding-top: 3em;
         gap: 0.8em;
         max-width: 100vw;
         margin: 0 auto;
+        max-width: 110rem;
     }
 
     h2 {
@@ -100,13 +101,13 @@
 
 @media (min-width: 1287px) {
     #aboutMe {
+        padding: 3.5rem;
+        padding-top: 6em;
+        
         div {
             grid-template-columns: 1fr 2fr 1fr 1fr;
             grid-template-rows: 7fr 10fr;
-            padding: 3.5rem;
-            padding-top: 6em;
             gap: 2em;
-            max-width: 120em;
         }
 
         h2 {

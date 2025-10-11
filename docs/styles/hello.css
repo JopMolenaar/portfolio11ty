@@ -3,12 +3,23 @@ main .hello {
     align-items: end;
     height: 80vh;
 
+    > div {
+        background-color: var(--background-color);
+        mix-blend-mode: darken;
+        width: 100%;
+        color: #ffffff;
+        font-weight: 700;
+        display: none;
+        justify-content: end;
+        position: relative;
+        align-self: end;
+    }
     & h1 {
         order: -1;
         width: 100%;
+        max-width: 110rem;
+        margin: 0 auto;
         height: 1.44em;
-        background-color: var(--background-color);
-        mix-blend-mode: darken;
         font-size: 11vw;
         padding-left: 2rem;
         display: flex;
@@ -18,26 +29,6 @@ main .hello {
             color: rgb(255, 255, 255);
             mix-blend-mode: difference;
             transform: translateY(-0.2em);
-        }
-    }
-
-    & div {
-        background-color: var(--background-color);
-        color: #ffffff;
-        text-shadow: -2px -2px 2px rgba(255, 255, 255, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.5);
-        font-weight: 700;
-        display: none;
-        justify-content: end;
-        position: relative;
-        width: 50vw;
-        align-self: end;
-        height: 3.4em;
-        font-size: 1.9em;
-        padding-inline: 1.5em;
-
-        & p {
-            transform: translateY(-0.97em);
-            text-transform: capitalize;
         }
     }
 
