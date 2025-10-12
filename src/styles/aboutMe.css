@@ -8,7 +8,6 @@
         flex-wrap: wrap;
         height: fit-content;
         gap: 0.8em;
-        max-width: 100vw;
         margin: 0 auto;
         max-width: 110rem;
     }
@@ -27,7 +26,7 @@
         max-width: 100%;
         font-size: calc(0.8em + 0.6vw);
         grid-column: 1/2;
-        grid-row: 2/3;
+        grid-row: 2/4;
         max-width: 40em;
     }
 
@@ -50,7 +49,8 @@
         div {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 7fr 10fr;
+            /* grid-template-rows: max(13em, minmax(0, 7fr)) max(13em, minmax(0, 10fr)) max(13em, minmax(0, 10fr)); */
+            grid-template-rows: 15em 15em auto;
             gap: 1.5em;
             column-gap: 3em;
         }
@@ -106,7 +106,6 @@
         
         div {
             grid-template-columns: 1fr 2fr 1fr 1fr;
-            grid-template-rows: 7fr 10fr;
             gap: 2em;
         }
 
@@ -119,7 +118,7 @@
         p {
             max-width: 40em;
             grid-column: 2/3;
-            grid-row: 2/3;
+            grid-row: 2/4;
             font-size: calc(1em + 0.3vw);
         }
 

@@ -25,6 +25,23 @@ summary, label {
   font-family: "Montserrat", sans-serif;
 }
 
+p span.highlight {
+  position: relative;
+  z-index: 99;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5em;
+    bottom: 0.1em;
+    left: 0;
+    background-color: #00ffff;
+    z-index: -1;
+    opacity: 0.4;
+    transform: rotate(-2deg);
+  }
+}
+
 button,
 summary {
   cursor: pointer;

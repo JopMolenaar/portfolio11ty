@@ -4,6 +4,7 @@ const cursors = document.querySelectorAll("body > div.blob");
 let cursorOffsetX = 0;
 let cursorOffsetY = 0;
 
+// TODO BLOB AANZETTEN
 // body.addEventListener("mousemove", (e) => {
 //     cursors.forEach((cursor) => {
 //         cursorOffsetY = e.clientY;
