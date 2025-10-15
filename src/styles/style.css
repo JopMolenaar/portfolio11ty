@@ -35,7 +35,7 @@ p span.highlight {
     height: 0.5em;
     bottom: 0.1em;
     left: 0;
-    background-color: #00ffff;
+    background-color: #7ccfcf;
     z-index: -1;
     opacity: 0.4;
     transform: rotate(-2deg);
@@ -63,7 +63,7 @@ summary {
 }
 
 :root {
-  --background-color: rgb(33, 33, 33);
+  --background-color: rgb(22, 22, 22);
   --color-text: rgb(224, 224, 224);
   --color-text-black: black;
   --color-white: #3B3B3B;
@@ -107,7 +107,6 @@ header {
         & a {
           text-decoration: none;
           color: black;
-          /* TODO CHANGE THIS COLOR TO WHITE WHEN ITS ABOVE THE BLACK SECTIONS */
           font-size: 1.2em;
           font-weight: 700;
         }

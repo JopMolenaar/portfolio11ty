@@ -144,7 +144,7 @@ main {
 @media (prefers-reduced-motion: no-preference) {
     .scroller[data-animated="true"] {
         ul {
-            animation: scroll 20s forwards linear infinite;
+            animation: scroll 25s forwards linear infinite;
         }
     }
     @keyframes scroll {
