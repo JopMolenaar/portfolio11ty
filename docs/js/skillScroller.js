@@ -5,7 +5,6 @@
  * @Description:
  */
 
-const projects = document.querySelectorAll(".projects ul li button");
 const scrollers = document.querySelectorAll(".scroller");
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

@@ -49,8 +49,7 @@
         div {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* grid-template-rows: max(13em, minmax(0, 7fr)) max(13em, minmax(0, 10fr)) max(13em, minmax(0, 10fr)); */
-            grid-template-rows: 17em 17em auto;
+            grid-template-rows: 8em 17em auto;
             gap: 1.5em;
             column-gap: 3em;
         }
@@ -106,6 +105,7 @@
         
         div {
             grid-template-columns: 1fr 2fr 1fr 1fr;
+            grid-template-rows: 14em 17em auto;
             gap: 2em;
         }
 

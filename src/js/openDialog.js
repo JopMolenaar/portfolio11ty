@@ -5,30 +5,30 @@
  * @Description:
  */
 
-const body = document.querySelector("body");
-const dialogs = document.querySelectorAll("dialog");
+const grid = document.querySelector('section.projects ul');
+const items = document.querySelectorAll('section.projects ul li');
 
-// projects.forEach((project) => {
-//     project.addEventListener("click", () => {
-//         dialogs.forEach((dialog) => {
-//             if (dialog.id === `dialog_${project.dataset.project}`) {
-//                 dialog.showModal();
-//                 body.classList.add("modal-open");
-//                 const closeBtn = dialog.querySelector("button");
-//                 closeBtn.addEventListener("click", () => {
-//                     body.classList.remove("modal-open");
-//                 });
-//             } 
-//         });
-//     });
-// });
+// wrapGrid returns helpers you can use (unwrapGrid, forceGridAnimation)
+const { unwrapGrid, forceGridAnimation } = animateCSSGrid.wrapGrid(grid, {
+    duration: 600,      // ms
+    stagger: 60,        // ms between items
+    easing: 'easeInOut' // easing string from lib
+});
 
-// function handleUnknownProject(element) {
-//     // Add the 'unknown-project' class to the element
-//     element.classList.add("unknown-project");
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        const content = item.querySelector('section');
 
-//     // Remove the 'unknown-project' class after 1000 milliseconds (1 second)
-//     setTimeout(() => {
-//         element.classList.remove("unknown-project");
-//     }, 600);
-// }
+        console.log('click');
+
+        items.forEach(item2 => {
+            if (item !== item2) {
+                item2.classList.remove('active');
+            }
+        })
+        item.classList.toggle('active');
+        setTimeout(() => {
+            content.classList.toggle('doneLoading');
+        }, 1000);
+    });
+});
