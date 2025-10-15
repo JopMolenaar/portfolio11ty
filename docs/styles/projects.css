@@ -60,10 +60,6 @@ main > section.projects {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-            
-                /* &.unknown-project {
-                    background-color: rgba(225, 0, 0, 0.3);
-                } */
 
                 > div {
                     /* important so the content doesnt jump when transitioning */
