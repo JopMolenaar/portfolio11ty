@@ -21,7 +21,8 @@ p,
 a,
 li,
 button,
-summary, label {
+summary,
+label {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -66,7 +67,7 @@ summary {
   --background-color: rgb(22, 22, 22);
   --color-text: rgb(224, 224, 224);
   --color-text-black: black;
-  --color-white: #3B3B3B;
+  --color-white: #3b3b3b;
   --color-gray: #c6c6c6;
   --color-black: #ffffff;
   --color-direct-background: rgba(44, 44, 44, 0.63);
@@ -87,7 +88,6 @@ body {
 html:has(a:hover) .blob {
   transition: 200ms;
   opacity: 0;
-  
 }
 
 header {
@@ -102,15 +102,15 @@ header {
   & nav {
     display: flex;
     gap: 2em;
-      & li {
-        list-style: none;
-        & a {
-          text-decoration: none;
-          color: black;
-          font-size: 1.2em;
-          font-weight: 700;
-        }
+    & li {
+      list-style: none;
+      & a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+        font-weight: 700;
       }
+    }
   }
 }
 
@@ -121,7 +121,6 @@ body > .blob {
   background-color: rgb(214, 214, 214);
   border-radius: 50%;
   z-index: 80;
-
 }
 
 body .blob:nth-of-type(1) {
@@ -195,7 +194,7 @@ body {
 
 footer {
   padding: 0.6em;
-  background-color: #3B3B3B;
+  background-color: #3b3b3b;
   color: white;
   display: flex;
   align-items: center;
@@ -209,7 +208,8 @@ footer div a {
   width: fit-content;
 }
 footer div a {
-  img, svg {
+  img,
+  svg {
     width: 1.8em;
     filter: invert(100%);
     transition: 200ms;
@@ -217,35 +217,33 @@ footer div a {
   }
 }
 footer div a:hover {
-  img, svg {
+  img,
+  svg {
     scale: 1.1;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  input, textarea {
+  input,
+  textarea {
     color-scheme: dark;
   }
 }
-
-
-
-
 
 /* Loading in animation */
 body.loading {
   header {
     opacity: 0;
     /* TODO animate loading in one by one */
-    animation: slideIn 1.5s forwards; 
+    animation: slideIn 1.5s forwards;
   }
-  main section:not(.hello){
+  main section:not(.hello) {
     opacity: 0;
-    animation: slideUp 1.5s forwards; 
+    animation: slideUp 1.5s forwards;
   }
   main section.hello {
     h1 {
-      animation: slideDown 1.5s forwards; 
+      animation: slideDown 1.5s forwards;
     }
   }
 }

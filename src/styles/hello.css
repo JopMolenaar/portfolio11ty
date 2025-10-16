@@ -1,86 +1,86 @@
 main .hello {
+  display: flex;
+  align-items: end;
+  height: 80vh;
+
+  > div {
+    background-color: var(--background-color);
+    mix-blend-mode: darken;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 700;
+    display: none;
+    justify-content: end;
+    position: relative;
+    align-self: end;
+    padding-inline: 2rem;
+  }
+  h1 {
+    order: -1;
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+    height: 1.44em;
+    font-size: 11vw;
     display: flex;
-    align-items: end;
+    padding-bottom: 0.5em;
+    .transparent {
+      position: absolute;
+      color: rgb(255, 255, 255);
+      mix-blend-mode: difference;
+      transform: translateY(-0.2em);
+    }
+  }
+
+  & img {
+    position: fixed;
+    width: 100vw;
     height: 80vh;
-
-    > div {
-        background-color: var(--background-color);
-        mix-blend-mode: darken;
-        width: 100%;
-        color: #ffffff;
-        font-weight: 700;
-        display: none;
-        justify-content: end;
-        position: relative;
-        align-self: end;
-        padding-inline: 2rem;
-    }
-    h1 {
-        order: -1;
-        width: 100%;
-        max-width: 110rem;
-        margin: 0 auto;
-        height: 1.44em;
-        font-size: 11vw;
-        display: flex;
-        padding-bottom: 0.5em;
-        .transparent {
-            position: absolute;
-            color: rgb(255, 255, 255);
-            mix-blend-mode: difference;
-            transform: translateY(-0.2em);
-        }
-    }
-
-    & img {
-        position: fixed;
-        width: 100vw;
-        height: 80vh;
-        transform-origin: bottom;
-        object-fit: cover;
-        opacity: 1;
-        order: -1;
-        z-index: -1;
-        filter: brightness(1.13);
-        top: -2px;
-    }
+    transform-origin: bottom;
+    object-fit: cover;
+    opacity: 1;
+    order: -1;
+    z-index: -1;
+    filter: brightness(1.13);
+    top: -2px;
+  }
 }
 
 @media (min-width: 620px) {
-    main .hello {
-        & h1 {
-            font-size: 4.5em;
-            min-width: 8em;
-            width: 100vw;
-        }
-        & div {
-            display: flex;
-        }
+  main .hello {
+    & h1 {
+      font-size: 4.5em;
+      min-width: 8em;
+      width: 100vw;
     }
+    & div {
+      display: flex;
+    }
+  }
 }
 
 @media (min-width: 1287px) {
-    main .hello {
-        > div {
-            padding-inline: 3.5rem;
-        }
+  main .hello {
+    > div {
+      padding-inline: 3.5rem;
     }
+  }
 }
 
 @supports (animation-timeline: view()) {
-    main > section:first-of-type img {
-        animation: header-image-fade-out linear forwards;
-        animation-timeline: view();
-        animation-range: exit -400px;
-    }
+  main > section:first-of-type img {
+    animation: header-image-fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: exit -400px;
+  }
 
-    @keyframes header-image-fade-out {
-        10% {
-            scale: 1;
-        }
-        90%,
-        100% {
-            scale: 1.1;
-        }
+  @keyframes header-image-fade-out {
+    10% {
+      scale: 1;
     }
+    90%,
+    100% {
+      scale: 1.1;
+    }
+  }
 }
