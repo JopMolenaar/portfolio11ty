@@ -24,19 +24,25 @@ items.forEach((item) => {
 
     items.forEach((item2) => {
       if (item !== item2 && item2.classList.contains("enlarge")) {
-        item2.classList.remove("enlarge");
         item2.classList.add("transition-back");
         itemStorage = item2;
+        setTimeout(() => {
+            item2.classList.remove("enlarge");
+        }, 200);
       }
     });
 
     if(item.classList.contains("enlarge")) {
-        item.classList.remove("enlarge");
         item.classList.add("transition-back");
         itemStorage2 = item;
+        setTimeout(() => {
+            item.classList.remove("enlarge");
+        }, 200);
     } else {
-        item.classList.add("enlarge");
         item.classList.add("transition");
+        setTimeout(() => {
+            item.classList.add("enlarge");
+        }, 200);
     }
 
 
@@ -48,7 +54,7 @@ items.forEach((item) => {
 
         itemStorage ? itemStorage.classList.remove("content-active"): null;
         itemStorage2 ? itemStorage2.classList.remove("content-active"): null;
-    }, 1000);
+    }, 1200);
 
     setTimeout(() => {
         content.classList.toggle("doneLoading");
