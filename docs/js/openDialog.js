@@ -19,6 +19,7 @@ items.forEach((item) => {
   item.addEventListener("click", async () => {
     const content = item.querySelector("section");
     grid.classList.add("loading");
+    item.classList.add("clicked");
     let itemStorage; 
     let itemStorage2; 
 
@@ -50,6 +51,7 @@ items.forEach((item) => {
     setTimeout(() => {
         content.classList.toggle("doneLoading");
         grid.classList.remove("loading");
+        item.classList.remove("clicked");
         item.classList.add("content-active");
 
         itemStorage ? itemStorage.classList.remove("content-active"): null;

@@ -33,6 +33,7 @@
   img {
     width: 25vw;
     max-width: 10em;
+    min-width: 8em;
     aspect-ratio: 1/1;
     object-fit: cover;
     filter: brightness(0.8);
@@ -98,6 +99,14 @@
   }
 }
 
+/* @media (min-width: 1087px) {
+ #aboutMe {
+    div {
+      grid-template-rows: 14em 17em auto;
+    }
+  }
+} */
+
 @media (min-width: 1287px) {
   #aboutMe {
     padding: 3.5rem;
@@ -105,7 +114,7 @@
 
     div {
       grid-template-columns: 1fr 2fr 1fr 1fr;
-      grid-template-rows: 14em 17em auto;
+      grid-template-rows: 16em 17em auto;
       gap: 2em;
     }
 

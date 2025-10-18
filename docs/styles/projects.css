@@ -7,6 +7,7 @@ main > section.projects {
   padding-top: 6em;
   background-color: var(--background-color);
   gap: 2em;
+
   h2 {
     font-size: calc(1em + 10vw);
     color: #c2dede;
@@ -22,32 +23,42 @@ main > section.projects {
   /* grid */
   > ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+    grid-template-columns: 1fr;
     grid-auto-rows: minmax(23em, auto);
     gap: 1.5em;
     width: 100%;
     max-width: 110rem;
+
     &.loading > li {
       transition: none;
+      pointer-events: none;
+      &.clicked::before  {
+        box-shadow: inset 0 0 800px 4000px rgb(0, 0, 0);
+        opacity: 1;
+      }
     }
     > li {
       padding: 0em;
       list-style: none;
       width: 100%;
       font-size: calc(0.8em + 0.6vw);
-      border: solid white 1px;
-      border-radius: 0.5em;
+      border: solid rgb(167, 167, 167) 1px;
+      border-radius: 1.5%;
+
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
       transition: 300ms;
       position: relative;
-
+      overflow: hidden;
       &::before {
         content: "";
         position: absolute;
         inset: 0;
         box-shadow: inset 0 0 800px 400px rgba(0, 0, 0, 0.681);
         opacity: 0;
-        transition: opacity 0.6s ease;
+        transition: opacity 0.3s ease;
         pointer-events: none;
       }
 
@@ -56,7 +67,7 @@ main > section.projects {
       }
 
       &.enlarge {
-        grid-column: span 2;
+        /* grid-column: span 2; */
         grid-row: span 2;
       }
 
@@ -69,11 +80,10 @@ main > section.projects {
         > section > div {
         max-width: none;
 
-        > p {
+        > div > p {
           display: block;
-          position: absolute;
-          top: 4em;
-          inset: 4em 1.2rem auto 1.2rem;
+          /* position: absolute; */
+          /* inset: 6em 1.2rem auto 1.2rem; */
         }
       }
       } 
@@ -111,8 +121,9 @@ main > section.projects {
 
           /* h3 and prize */
           > div {
-            display: flex;
-            gap: 1em;
+            display: grid;
+            grid-template-columns: 1fr 1.5em;
+            gap: 0.25em;
             position: absolute;
             top: 1.2rem;
             left: 1.2rem;
@@ -121,8 +132,12 @@ main > section.projects {
               font-size: 1.6em;
               margin-bottom: 1rem;
             }
+            > p {
+              grid-column: 1/3;
+            }
             /* prize */
             > div {
+              
               img {
                 width: 30px;
                 height: 30px;
@@ -157,7 +172,7 @@ main > section.projects {
             }
           }
 
-          > p {
+          > div > p {
             margin-bottom: 1em;
             max-width: 40em;
             display: none;
@@ -184,7 +199,6 @@ main > section.projects {
           section:nth-of-type(2) {
             display: none;
             padding-top: 1em;
-            /* display: flex; */
             margin-top: auto;
             justify-content: start;
             gap: 1em;
@@ -205,32 +219,15 @@ main > section.projects {
             }
           }
         }
-
-        > img {
-          display: none;
-          z-index: -1;
-          object-fit: cover;
-          max-height: 26em;
-        }
-
-        /* background: yellow; */
-        /* height: 100vh; */
-        /* width: 100vw; */
-        /* position: absolute; */
-        /* top: 0; */
-        /* left: 0; */
-        /* TODO take place in the other exisiting column, span 2 wide, 2 high. and show text on animation */
       }
     }
-
-    @supports (animation-timeline: view()) {
-      /* animation: fade-in-projects linear;
-                animation-timeline: view();
-                animation-range: -100px 600px; */
-    }
   }
+}
 
-  @media (min-width: 30em) {
+
+
+@media (min-width: 30em) {
+  main > section.projects {
     ul > li > section img {
       object-fit: cover;
       max-width: none;
@@ -240,16 +237,23 @@ main > section.projects {
       gap: 1em;
     }
   }
+}
 
-  @media (min-width: 50em) {
+@media (min-width: 50em) {
+  main > section.projects {
+    > ul {
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    }
     > ul > li > section {
       flex-direction: row;
     }
     > ul > li > section img {
-      max-width: 20em;
+      width: 100%;
+      height: 100%;
+      /* max-width: 20em;
       min-height: 21em;
       max-height: none;
-      object-fit: cover;
+      object-fit: cover; */
     }
     > ul > li > section > div {
       padding: 1em;
@@ -257,15 +261,29 @@ main > section.projects {
     > ul > li > section > div section:nth-child(4) * {
       margin: 0;
     }
-    > ul > li:nth-child(even) > section > img {
-      order: -1;
-    }
   }
 }
 
+
 @media (min-width: 930px) {
-  main > section.projects h2 {
-    font-size: calc(2em + 6vw);
+  main > section.projects {
+    h2 {
+      font-size: calc(2em + 6vw);
+    }
+    > ul {
+      grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+      &:has(li.enlarge) {      
+        /* grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); */
+      }
+      li {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &::before {
+          box-shadow: inset 0 0 800px 400px rgba(0, 0, 0, 0.681);
+        }
+      }
+    }
   }
 }
 

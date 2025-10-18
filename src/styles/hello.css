@@ -9,7 +9,7 @@ main .hello {
     width: 100%;
     color: #ffffff;
     font-weight: 700;
-    display: none;
+    /* display: none; */
     justify-content: end;
     position: relative;
     align-self: end;
