@@ -7,13 +7,13 @@ age: age
 <header>
     <nav>
         <li>
-            <a href="">Work</a>
+            <a href="#aboutMe">Me</a>
         </li>
         <li>
-            <a href="">Me</a>
+            <a href="#projects">Work</a>
         </li>
         <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
         </li>  
     </nav>
 </header>
@@ -33,7 +33,7 @@ age: age
     <div>
         <h2>Who am I?</h2>
         <p>
-            Hello I am Jop Molenaar, <%= age.age %> years old and recently finished my study Communication and 
+            Hello I am Jop, <%= age.age %> years old and recently finished my study Communication and 
             Multi-Media Design on the HvA, <span class="highlight">with honor</span>. 
             <br></br>
             I am a very enthusiastic and driven front-end developer who loves to learn new things and improve myself.
@@ -131,7 +131,7 @@ age: age
     </div>
 </section>
 
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2>Projects</h2>
     <ul>
           <% projects.projects.forEach((content) => { %>
@@ -183,7 +183,7 @@ age: age
            
 
 
-<section class="contact">
+<section class="contact" id="contact">
     <h2>Contact me: </h2>
     <!-- Contact form -->
     <p>LinkedIn down below ⬇️</p>

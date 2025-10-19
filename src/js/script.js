@@ -1,60 +1,6 @@
-// blob code
-const cursors = document.querySelectorAll("body > div.blob");
-
-let cursorOffsetX = 0;
-let cursorOffsetY = 0;
-
-// TODO BLOB AANZETTEN
-// body.addEventListener("mousemove", (e) => {
-//     cursors.forEach((cursor) => {
-//         cursorOffsetY = e.clientY;
-
-//         const offsetX = cursor.offsetWidth / 2;
-//         const offsetY = cursor.offsetHeight / 2;
-//         const posX = e.pageX - offsetX;
-//         const posY = e.pageY - offsetY;
-
-//         cursor.style.display = "block";
-//         cursor.style.top = posY + "px";
-//         cursor.style.left = posX + "px";
-//     });
-// });
-
-// document.addEventListener("scroll", () => {
-//     cursors.forEach((cursor) => {
-//         const offsetY = cursor.offsetHeight / 2;
-//         const posY = cursorOffsetY - offsetY + window.scrollY;
-//         cursor.style.top = posY + "px";
-//     });
-// });
-
 // Decide the color of the nav elements
 const target = document.querySelector("h1");
 const header = document.querySelector("body header");
-
-window.addEventListener("scroll", () => {
-  decideLinkColor();
-});
-window.onload = () => {
-  decideLinkColor();
-};
-
-const decideLinkColor = () => {
-  const headerHeight = header.offsetHeight / 2;
-  const rect = target.getBoundingClientRect();
-  const links = header.querySelectorAll("a");
-  let color = "black";
-
-  if (rect.top <= headerHeight) {
-    color = "white";
-  } else {
-    color = "black";
-  }
-
-  links.forEach((link) => {
-    link.style.color = color;
-  });
-};
 
 document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth > 1287) {
@@ -108,13 +54,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // TODO REMOVE THIS
-  console.log(window.scrollY);
-
   // Check if the page is not scrolled on, if so, add the loading class
   if (window.scrollY === 0) {
     document.body.classList.add("loading");
   } else {
     document.body.classList.remove("loading");
   }
+
+  decideLinkColor();
 });
+
+window.addEventListener("scroll", () => {
+  decideLinkColor();
+});
+window.onload = () => {
+  decideLinkColor();
+};
+
+const decideLinkColor = () => {
+  const headerHeight = header.offsetHeight / 2;
+  const rect = target.getBoundingClientRect();
+  const links = header.querySelectorAll("a");
+  let color = "black";
+
+  if (rect.top <= headerHeight) {
+    color = "white";
+  } else {
+    color = "black";
+  }
+
+  links.forEach((link) => {
+    link.style.color = color;
+  });
+};

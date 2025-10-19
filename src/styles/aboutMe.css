@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: 930px) {
+@media (min-width: 58em) {
   #aboutMe {
     div {
       display: grid;
@@ -99,15 +99,7 @@
   }
 }
 
-/* @media (min-width: 1087px) {
- #aboutMe {
-    div {
-      grid-template-rows: 14em 17em auto;
-    }
-  }
-} */
-
-@media (min-width: 1287px) {
+@media (min-width: 80em) {
   #aboutMe {
     padding: 3.5rem;
     padding-top: 6em;

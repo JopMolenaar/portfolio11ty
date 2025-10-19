@@ -46,7 +46,7 @@ main .hello {
   }
 }
 
-@media (min-width: 620px) {
+@media (min-width: 38.75em) {
   main .hello {
     & h1 {
       font-size: 4.5em;
@@ -59,7 +59,7 @@ main .hello {
   }
 }
 
-@media (min-width: 1287px) {
+@media (min-width: 80em) {
   main .hello {
     > div {
       padding-inline: 3.5rem;

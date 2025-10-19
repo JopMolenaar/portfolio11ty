@@ -26,23 +26,6 @@ label {
   font-family: "Montserrat", sans-serif;
 }
 
-p span.highlight {
-  position: relative;
-  z-index: 99;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.5em;
-    bottom: 0.1em;
-    left: 0;
-    background-color: #7ccfcf;
-    z-index: -1;
-    opacity: 0.4;
-    transform: rotate(-2deg);
-  }
-}
-
 button,
 summary {
   cursor: pointer;
@@ -78,16 +61,19 @@ summary {
   --light-hover: rgba(255, 255, 255, 0.05);
 }
 
+html {
+  scroll-behavior: smooth;
+  &:has(body.loading){
+    scroll-behavior: unset;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100%;
   background-color: var(--background-color);
-}
-
-html:has(a:hover) .blob {
-  transition: 200ms;
-  opacity: 0;
+  /* overflow-x: hidden; */
 }
 
 header {
@@ -114,69 +100,6 @@ header {
   }
 }
 
-body > .blob {
-  display: none;
-  pointer-events: none;
-  position: absolute;
-  background-color: rgb(214, 214, 214);
-  border-radius: 50%;
-  z-index: 80;
-}
-
-body .blob:nth-of-type(1) {
-  transition: 60ms;
-  width: 30px;
-  height: 30px;
-}
-
-body .blob:nth-of-type(2) {
-  transition: 65ms;
-  width: 27px;
-  height: 27px;
-}
-
-body .blob:nth-of-type(3) {
-  transition: 70ms;
-  width: 24px;
-  height: 24px;
-}
-
-body .blob:nth-of-type(4) {
-  transition: 75ms;
-  width: 21px;
-  height: 21px;
-}
-
-body .blob:nth-of-type(6) {
-  transition: 80ms;
-  width: 18px;
-  height: 18px;
-}
-
-body .blob:nth-of-type(7) {
-  transition: 85ms;
-  width: 15px;
-  height: 15px;
-}
-
-body .blob:nth-of-type(8) {
-  transition: 90ms;
-  width: 12px;
-  height: 12px;
-}
-
-body .blob:nth-of-type(9) {
-  transition: 95ms;
-  width: 9px;
-  height: 9px;
-}
-
-body .blob:nth-of-type(10) {
-  transition: 100ms;
-  width: 6px;
-  height: 6px;
-}
-
 main {
   width: 100%;
   height: 100%;
@@ -188,9 +111,24 @@ main > section {
   color: white;
 }
 
-body {
-  overflow-x: hidden;
+
+p span.highlight {
+  position: relative;
+  z-index: 99;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5em;
+    bottom: 0.1em;
+    left: 0;
+    background-color: #7ccfcf;
+    z-index: -1;
+    opacity: 0.4;
+    transform: rotate(-2deg);
+  }
 }
+
 
 footer {
   padding: 0.6em;
@@ -247,6 +185,8 @@ body.loading {
     }
   }
 }
+
+
 @keyframes slideIn {
   from {
     opacity: 0;
