@@ -16,8 +16,10 @@ const { unwrapGrid, forceGridAnimation } = animateCSSGrid.wrapGrid(grid, {
 });
 
 items.forEach((item) => {
-  item.addEventListener("click", async () => {
-    const content = item.querySelector("button");
+  const button = item.querySelector(".content button")
+  button.addEventListener("click", async () => {
+    const content = item.querySelector(".content");
+    
     grid.classList.add("loading");
     item.classList.add("clicked");
     let itemStorage; 
@@ -26,6 +28,7 @@ items.forEach((item) => {
     items.forEach((item2) => {
       if (item !== item2 && item2.classList.contains("enlarge")) {
         item2.classList.add("transition-back");
+        item2.classList.add("clicked");
         itemStorage = item2;
         setTimeout(() => {
             item2.classList.remove("enlarge");
@@ -49,7 +52,6 @@ items.forEach((item) => {
     setTimeout(() => {
         content.classList.toggle("doneLoading");
         grid.classList.remove("loading");
-        item.classList.remove("clicked");
         item.classList.add("content-active");
 
         itemStorage ? itemStorage.classList.remove("content-active"): null;
@@ -63,9 +65,8 @@ items.forEach((item) => {
         items.forEach((item2) => {
             item2.classList.remove("transition-back");
             item2.classList.remove("transition");
+            item2.classList.remove("clicked");
         });
-        
-
     }, 1300);
   });
 });

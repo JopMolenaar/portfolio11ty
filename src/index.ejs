@@ -123,7 +123,7 @@ age: age
           <% projects.projects.forEach((content) => { %>
             <li >
                 <!-- Inner section -->
-                <button data-project="<%= content.dataName %>">  
+                <div class="content">  
                     <!-- centered div to make the transition smooth -->
                     <div>
                         <div>
@@ -160,9 +160,10 @@ age: age
                     <img
                         src="<%= content.img %>"
                         alt="<%= content.imgAlt %>"
-                        />
-                </button>
-                <!-- Hier een button plaatsen en de button hierboven een section weer maken, zodat je dingen kan selecteren en daarnaast met de button hem kan openen -->
+                    />
+                    <!-- Button to open the content div  -->
+                    <button></button>
+                </div>
             </li>               
         <% }); %>
     </ul>
