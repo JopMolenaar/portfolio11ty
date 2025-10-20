@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Check if the page is not scrolled on, if so, add the loading class
   if (window.scrollY === 0) {
     document.body.classList.add("loading");
+    setTimeout(() => {
+    document.body.classList.remove("loading");
+    }, 1000);
   } else {
     document.body.classList.remove("loading");
   }

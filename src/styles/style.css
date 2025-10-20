@@ -65,6 +65,7 @@ html {
   scroll-behavior: smooth;
   &:has(body.loading){
     scroll-behavior: unset;
+    overflow-y: hidden;
   }
 }
 

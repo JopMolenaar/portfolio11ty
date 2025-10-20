@@ -4,20 +4,6 @@ title: My Eleventy Portfolio
 age: age
 ---
 
-<header>
-    <nav>
-        <li>
-            <a href="#aboutMe">Me</a>
-        </li>
-        <li>
-            <a href="#projects">Work</a>
-        </li>
-        <li>
-            <a href="#contact">Contact</a>
-        </li>  
-    </nav>
-</header>
-
 <main>
   <section class="hello">
     <div>
@@ -135,9 +121,9 @@ age: age
     <h2>Projects</h2>
     <ul>
           <% projects.projects.forEach((content) => { %>
-            <li tabindex="0" style="background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.762) 80%), url('<%= content.img %>')">
+            <li >
                 <!-- Inner section -->
-                <section data-project="<%= content.dataName %>">  
+                <button data-project="<%= content.dataName %>">  
                     <!-- centered div to make the transition smooth -->
                     <div>
                         <div>
@@ -171,11 +157,12 @@ age: age
                         </section>
                      
                     </div>
-                    <!-- <img
+                    <img
                         src="<%= content.img %>"
                         alt="<%= content.imgAlt %>"
-                        /> -->
-                </section>
+                        />
+                </button>
+                <!-- Hier een button plaatsen en de button hierboven een section weer maken, zodat je dingen kan selecteren en daarnaast met de button hem kan openen -->
             </li>               
         <% }); %>
     </ul>

@@ -17,7 +17,7 @@ const { unwrapGrid, forceGridAnimation } = animateCSSGrid.wrapGrid(grid, {
 
 items.forEach((item) => {
   item.addEventListener("click", async () => {
-    const content = item.querySelector("section");
+    const content = item.querySelector("button");
     grid.classList.add("loading");
     item.classList.add("clicked");
     let itemStorage; 
@@ -46,8 +46,6 @@ items.forEach((item) => {
         }, 200);
     }
 
-
-    // TODO when clicked and in animtion, remove clickable events on these
     setTimeout(() => {
         content.classList.toggle("doneLoading");
         grid.classList.remove("loading");
