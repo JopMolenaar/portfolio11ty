@@ -31,9 +31,34 @@ summary {
   cursor: pointer;
 }
 
-::-webkit-scrollbar {
-  display: none;
+/* Example: apply to the whole page scroll area */
+html::-webkit-scrollbar {
+  width: 6px;             /* vertical scrollbar thickness */
 }
+
+/* transparent track so page content shows behind it (if browser renders as overlay) */
+html::-webkit-scrollbar-track {
+  background: transparent;
+  /* background-color: #c2dede; */
+  /* opacity: 0.2; */
+}
+
+/* the draggable bar */
+html::-webkit-scrollbar-thumb {
+  background-color: #595959;
+  border-radius: 999px;
+  min-height: 30px;                     /* make small drags easier */
+  border: 2px solid rgba(255,255,255,0.0); /* prevents weird edges */
+  opacity: 0.6;                          /* idle lower opacity */
+}
+
+/* on hover/active make it brighter / more opaque */
+html::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.555);
+  opacity: 1;
+}
+
 
 /* The hide class */
 .visually-hidden {
@@ -62,6 +87,9 @@ summary {
 }
 
 html {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   &:has(body.loading){
     scroll-behavior: unset;
@@ -108,7 +136,7 @@ main {
 }
 main > section {
   display: flex;
-  width: 100vw;
+  width: 100%;
   color: white;
 }
 

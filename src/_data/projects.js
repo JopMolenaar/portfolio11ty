@@ -59,7 +59,18 @@ module.exports = async function () {
 
             if (item.descLink) {
                 if (!item.descLink.startsWith("http")) {
-                    markdownContent = await parseToHTML(item.descLink); // Parse markdown file
+                    // Resolve the local path relative to the projects.json file
+                    console.log("LOCAL MD FILE", item.descLink);
+                    const localMarkdownPath = path.resolve(path.dirname(projectsFilePath), `../projects/projectsDesc/${item.descLink}`);
+                    markdownContent = await parseToHTML(localMarkdownPath); // Parse local markdown file
+                    console.log("MARKDOWNCONTENT", markdownContent);
+
+                    // Try to strip <p> tags only if the entire content is wrapped in a single <p>
+                    if (/^<p>[\s\S]*<\/p>$/.test(markdownContent.trim())) {
+                        descriptionContent = markdownContent.trim().replace(/^<p>([\s\S]*)<\/p>$/, "$1");
+                    } else {
+                        descriptionContent = markdownContent.trim();
+                    }
                 } else {
                     markdownContent = await parseHTTPmdToHTML(item.descLink); // Parse markdown file from HTTP link
                 }
@@ -84,7 +95,7 @@ module.exports = async function () {
             let projectDescription = "";
             if (descriptionContent !== "") {
                 projectDescription = descriptionContent;
-                console.log("yeah", descriptionContent);
+                console.log("FETCHED description content:", descriptionContent);
             } else {
                 projectDescription = item.littleDesc;
             }

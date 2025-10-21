@@ -8,6 +8,11 @@ main > section.projects {
   background-color: var(--background-color);
   gap: 2em;
 
+/* TODO
+- MAAK EEN CLASS VOOR GROTE PROJECTEN, EENTJE DIE OOK OPZIJ SPANT, HIER MOET DE AFBEELDING ANDERS GEPOSITIONEERD ZIJN LIJKT WEL 
+- KLEINSTE CARD IS NU WAT KLEIN VOOR DE TEKST DIE ERIN STAAT. 
+*/
+
   h2 {
     font-size: calc(1em + 10vw);
     color: #c2dede;

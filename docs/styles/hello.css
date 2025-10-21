@@ -34,7 +34,7 @@ main .hello {
 
   & img {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     transform-origin: bottom;
     object-fit: cover;
@@ -51,7 +51,7 @@ main .hello {
     & h1 {
       font-size: 4.5em;
       min-width: 8em;
-      width: 100vw;
+      width: 100%;
     }
     & div {
       display: flex;
