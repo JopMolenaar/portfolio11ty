@@ -31,26 +31,19 @@ summary {
   cursor: pointer;
 }
 
-/* Example: apply to the whole page scroll area */
 html::-webkit-scrollbar {
-  width: 6px;             /* vertical scrollbar thickness */
+  width: 6px;           
 }
-
-/* transparent track so page content shows behind it (if browser renders as overlay) */
 html::-webkit-scrollbar-track {
   background: transparent;
 }
-
-/* the draggable bar */
 html::-webkit-scrollbar-thumb {
   background-color: #595959;
   border-radius: 999px;
-  min-height: 30px;                     /* make small drags easier */
-  border: 2px solid rgba(255,255,255,0.0); /* prevents weird edges */
-  opacity: 0.6;                          /* idle lower opacity */
+  min-height: 30px;                    
+  border: 2px solid rgba(255,255,255,0.0); 
+  opacity: 0.6;                  
 }
-
-/* on hover/active make it brighter / more opaque */
 html::-webkit-scrollbar-thumb:hover,
 html::-webkit-scrollbar-thumb:active {
   background: rgba(255, 255, 255, 0.555);
@@ -101,7 +94,6 @@ body {
   padding: 0;
   min-height: 100%;
   background-color: var(--background-color);
-  /* overflow-x: hidden; */
 }
 
 header {
@@ -137,6 +129,17 @@ main > section {
   display: flex;
   width: 100%;
   color: white;
+  > h2, > div > h2 {
+    color: var(--heading-color);
+    font-size: calc(1em + 10vw);
+    
+    @media (min-width: 58em) {
+      font-size: calc(2em + 6vw);
+    }
+    @media (min-width: 80em) {
+      font-size: calc(6em + 2vw);
+    }
+  }
 }
 
 
@@ -160,8 +163,10 @@ p span.highlight {
 
 footer {
   padding: 0.6em;
-  background-color: #3b3b3b;
-  color: white;
+  /* background-color: #3b3b3b; */
+  background-color: var(--heading-color);
+  filter: brightness(90%);
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,7 +182,8 @@ footer div a {
   img,
   svg {
     width: 1.8em;
-    filter: invert(100%);
+    /* filter: invert(100%); */
+    border-radius: 12%;
     transition: 200ms;
     height: auto;
   }

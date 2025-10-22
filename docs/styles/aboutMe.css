@@ -1,6 +1,7 @@
-#aboutMe {
+.aboutMe {
   background-color: var(--background-color);
   padding: 2rem;
+  padding-inline: 1em;
   padding-top: 3em;
 
   div {
@@ -10,87 +11,31 @@
     gap: 0.8em;
     margin: 0 auto;
     max-width: 110rem;
-  }
 
-  h2 {
-    color: var(--heading-color);
-    font-size: calc(1em + 10vw);
-    grid-column: 1/2;
-    transform: rotate(-5deg);
-    align-self: center;
-    justify-self: start;
-    text-wrap: nowrap;
-  }
-  p {
-    display: inline-block;
-    max-width: 100%;
-    font-size: calc(0.8em + 0.6vw);
-    grid-column: 1/2;
-    grid-row: 2/4;
-    max-width: 40em;
-  }
-
-  img {
-    width: 25vw;
-    max-width: 10em;
-    min-width: 8em;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    filter: brightness(0.8);
-    transition: 350ms;
-    &:hover {
-      filter: brightness(1);
-      transform: scale(1.05) rotate(0deg);
-    }
-  }
-}
-
-@media (min-width: 58em) {
-  #aboutMe {
-    div {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 8em 17em auto;
-      gap: 1.5em;
-      column-gap: 3em;
-    }
     h2 {
-      font-size: calc(2em + 6vw);
-    }
-    img {
-      width: 17vw;
-      grid-column: 2/3;
-      grid-row: 2/4;
+      grid-column: 1/2;
+      transform: rotate(-5deg);
       align-self: center;
-      justify-self: center;
-      margin-bottom: 1em;
-      max-width: none;
+      justify-self: start;
+      text-wrap: nowrap;
+    }
+    p {
+      display: inline-block;
+      max-width: 100%;
+      font-size: calc(0.8em + 0.6vw);
+      grid-column: 1/2;
+      grid-row: 2/4;
+      max-width: 40em;
+    }
 
-      &:nth-of-type(1) {
-        align-self: start;
-        justify-self: start;
-        transform: rotate(-10deg);
-      }
-      &:nth-of-type(2) {
-        align-self: end;
-        justify-self: end;
-        transform: rotate(10deg);
-      }
-      &:nth-of-type(3) {
-        align-self: center;
-        justify-self: center;
-        transform: rotate(5deg);
-      }
-      &:nth-of-type(4) {
-        align-self: end;
-        justify-self: start;
-        transform: rotate(-6deg);
-      }
-      &:nth-of-type(5) {
-        align-self: start;
-        justify-self: end;
-        transform: rotate(16deg);
-      }
+    img {
+      width: 25vw;
+      max-width: 10em;
+      min-width: 8em;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      filter: brightness(0.8);
+      transition: 350ms;
       &:hover {
         filter: brightness(1);
         transform: scale(1.05) rotate(0deg);
@@ -99,8 +44,65 @@
   }
 }
 
+@media (min-width: 30em) {
+  .aboutMe {
+    padding-inline: 2em;
+  }
+}
+@media (min-width: 58em) {
+  .aboutMe {
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 8em 17em auto;
+      gap: 1.5em;
+      column-gap: 3em;
+
+      img {
+        width: 17vw;
+        grid-column: 2/3;
+        grid-row: 2/4;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 1em;
+        max-width: none;
+
+        &:nth-of-type(1) {
+          align-self: start;
+          justify-self: start;
+          transform: rotate(-10deg);
+        }
+        &:nth-of-type(2) {
+          align-self: end;
+          justify-self: end;
+          transform: rotate(10deg);
+        }
+        &:nth-of-type(3) {
+          align-self: center;
+          justify-self: center;
+          transform: rotate(5deg);
+        }
+        &:nth-of-type(4) {
+          align-self: end;
+          justify-self: start;
+          transform: rotate(-6deg);
+        }
+        &:nth-of-type(5) {
+          align-self: start;
+          justify-self: end;
+          transform: rotate(16deg);
+        }
+        &:hover {
+          filter: brightness(1);
+          transform: scale(1.05) rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 80em) {
-  #aboutMe {
+  .aboutMe {
     padding: 3.5rem;
     padding-top: 6em;
 
@@ -108,66 +110,65 @@
       grid-template-columns: 1fr 2fr 1fr 1fr;
       grid-template-rows: 16em 17em auto;
       gap: 2em;
-    }
 
-    h2 {
-      grid-column: 1 / 3;
-      transform: rotate(-10deg);
-      font-size: calc(6em + 2vw);
-      justify-self: start;
-    }
-    p {
-      max-width: 40em;
-      grid-column: 2/3;
-      grid-row: 2/4;
-      font-size: calc(1em + 0.3vw);
-    }
-
-    img {
-      width: 90%;
-      height: auto;
-      max-width: 16em;
-      margin-bottom: 0;
-
-      &:nth-of-type(1) {
-        grid-column: var(--img1-col, 4/5);
-        grid-row: var(--img1-row, 2/3);
-        align-self: var(--img1-align, end);
-        justify-self: var(--img1-justify, center);
-        transform: rotate(var(--img1-rotate, 10deg));
-      }
-      &:nth-of-type(2) {
-        grid-column: var(--img2-col, 3/4);
-        grid-row: var(--img2-row, 1/2);
-        align-self: var(--img2-align, start);
-        justify-self: var(--img2-justify, start);
-        transform: rotate(var(--img2-rotate, 10deg));
-      }
-      &:nth-of-type(3) {
-        grid-column: var(--img3-col, 4/5);
-        grid-row: var(--img3-row, 1/2);
-        align-self: var(--img3-align, end);
-        justify-self: var(--img3-justify, start);
-        transform: rotate(var(--img3-rotate, -5deg));
-      }
-      &:nth-of-type(4) {
-        grid-column: var(--img4-col, 3/4);
-        grid-row: var(--img4-row, 2/3);
-        align-self: var(--img4-align, center);
-        justify-self: var(--img4-justify, end);
-        transform: rotate(var(--img4-rotate, 6deg));
-      }
-      /* For aesthetics this img is on a fixed position and not random  */
-      &:nth-of-type(5) {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        align-self: center;
+      h2 {
+        grid-column: 1 / 3;
+        transform: rotate(-10deg);
         justify-self: start;
-        transform: rotate(8deg);
       }
-      &:hover {
-        filter: brightness(1);
-        transform: scale(1.05) rotate(0deg);
+      p {
+        max-width: 40em;
+        grid-column: 2/3;
+        grid-row: 2/4;
+        font-size: calc(1em + 0.3vw);
+      }
+
+      img {
+        width: 90%;
+        height: auto;
+        max-width: 16em;
+        margin-bottom: 0;
+
+        &:nth-of-type(1) {
+          grid-column: var(--img1-col, 4/5);
+          grid-row: var(--img1-row, 2/3);
+          align-self: var(--img1-align, end);
+          justify-self: var(--img1-justify, center);
+          transform: rotate(var(--img1-rotate, 10deg));
+        }
+        &:nth-of-type(2) {
+          grid-column: var(--img2-col, 3/4);
+          grid-row: var(--img2-row, 1/2);
+          align-self: var(--img2-align, start);
+          justify-self: var(--img2-justify, start);
+          transform: rotate(var(--img2-rotate, 10deg));
+        }
+        &:nth-of-type(3) {
+          grid-column: var(--img3-col, 4/5);
+          grid-row: var(--img3-row, 1/2);
+          align-self: var(--img3-align, end);
+          justify-self: var(--img3-justify, start);
+          transform: rotate(var(--img3-rotate, -5deg));
+        }
+        &:nth-of-type(4) {
+          grid-column: var(--img4-col, 3/4);
+          grid-row: var(--img4-row, 2/3);
+          align-self: var(--img4-align, center);
+          justify-self: var(--img4-justify, end);
+          transform: rotate(var(--img4-rotate, 6deg));
+        }
+        /* For aesthetics this img is on a fixed position and not random  */
+        &:nth-of-type(5) {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          align-self: center;
+          justify-self: start;
+          transform: rotate(8deg);
+        }
+        &:hover {
+          filter: brightness(1);
+          transform: scale(1.05) rotate(0deg);
+        }
       }
     }
   }

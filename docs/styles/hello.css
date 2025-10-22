@@ -1,7 +1,7 @@
 main .hello {
   display: flex;
   align-items: end;
-  height: 80vh;
+  height: 60vh;
 
   > div {
     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, var(--background-color) 100%);
@@ -12,7 +12,7 @@ main .hello {
     justify-content: end;
     position: relative;
     align-self: end;
-    padding-inline: 2rem;
+    padding-inline: 1rem;
   }
   h1 {
     order: -1;
@@ -34,7 +34,7 @@ main .hello {
   & img {
     position: fixed;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     transform-origin: bottom;
     object-fit: cover;
     opacity: 1;
@@ -45,8 +45,15 @@ main .hello {
   }
 }
 
+@media (min-width: 30em) {
+  main .hello > div {
+    padding-inline: 2rem;
+  }
+}
+
 @media (min-width: 38.75em) {
   main .hello {
+    height: 80vh;
     & h1 {
       font-size: 4.5em;
       min-width: 8em;
@@ -54,6 +61,9 @@ main .hello {
     }
     & div {
       display: flex;
+    }
+    img {
+      height: 80vh;
     }
   }
 }

@@ -4,6 +4,7 @@ main > section.projects {
   align-items: center;
   height: fit-content;
   padding: 2rem;
+  padding-inline: 1rem;
   padding-top: 6em;
   background-color: var(--background-color);
   gap: 2em;
@@ -14,11 +15,8 @@ main > section.projects {
 */
 
   h2 {
-    font-size: calc(1em + 10vw);
-    color: var(--heading-color);
     transform: rotate(-2deg);
     align-self: start;
-    opacity: 0.8;
     max-width: 110rem;
     margin: 0 auto;
     width: 100%;
@@ -123,8 +121,6 @@ main > section.projects {
           }
         }
 
-       
-
         > img {
           position: absolute;
           z-index: -1;
@@ -146,7 +142,7 @@ main > section.projects {
           pointer-events: none;
 
           & * {
-            pointer-events: auto; /* allow text selection & links inside */
+            pointer-events: auto; 
           }
 
           /* h3 and prize */
@@ -269,6 +265,7 @@ main > section.projects {
 
 @media (min-width: 30em) {
   main > section.projects {
+    padding-inline: 2em;
     ul > li > .content img {
       object-fit: cover;
       max-width: none;
@@ -300,9 +297,6 @@ main > section.projects {
 
 @media (min-width: 58em) {
   main > section.projects {
-    h2 {
-      font-size: calc(2em + 6vw);
-    }
     > ul {
       grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
       li {
@@ -320,9 +314,6 @@ main > section.projects {
 @media (min-width: 80em) {
   main > section.projects {
     padding-inline: 3.5rem;
-    h2 {
-      font-size: calc(6em + 2vw);
-    }
     > ul > li {
       font-size: calc(1em + 0.2vw);
     }

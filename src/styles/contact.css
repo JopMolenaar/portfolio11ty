@@ -1,18 +1,21 @@
-main > section.contact {
+main > .contact {
   display: grid;
   flex-direction: column;
   align-items: center;
-  padding: 3em;
-  padding-block: 13em;
+  padding: 6em 1em 11em 1em;
   background-color: var(--background-color);
 
+  @media (min-width: 40em) {
+    padding-inline: 2em;
+  }
   h2 {
-    color: var(--heading-color);
-    /* padding: 1.5em; */
-    /*  TODO font-size en andere stylings standaard maken, breakpoints standaard maken, css dus gewoon opruimen, variabelen gebruiken */
-    font-size: 5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4em;
     justify-self: center;
+    text-wrap: nowrap;
+    @media (min-width: 40em) {
+      scale: 0.6;
+      padding-bottom: 0;
+    }
   }
 
   a {
@@ -32,8 +35,6 @@ main > section.contact {
       scale: 1.05;
     }
   }
-
-
 
   /* form {
     border-left: solid var(--color-gray) 4px;
@@ -84,7 +85,7 @@ main > section.contact {
   } */
 }
 
-body:has(section.contact a:hover) {
+body:has(.contact a:hover) {
   .blob {
     opacity: 0;
   }
