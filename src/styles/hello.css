@@ -4,12 +4,11 @@ main .hello {
   height: 80vh;
 
   > div {
-    background-color: var(--background-color);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, var(--background-color) 100%);
     mix-blend-mode: darken;
     width: 100%;
     color: #ffffff;
     font-weight: 700;
-    /* display: none; */
     justify-content: end;
     position: relative;
     align-self: end;

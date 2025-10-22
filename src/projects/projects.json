@@ -57,17 +57,31 @@
         "littleDesc": ""
     },
     {
-        "dataName": "IoT-check-in-system",
-        "name": "IoT check-in system",
-        "descLink": "https://raw.githubusercontent.com/JopMolenaar/IoT-check-in-project/main/README.md",
-        "linkToRepo": "https://github.com/JopMolenaar/IoT-check-in-project",
-        "linkToWebsite": "",
-        "images": ["indCheckInDevice.png"],
-        "usedSkills": ["PHP & MySQL", "C++", "HTML, CSS & Javascript"],
+        "dataName": "snsSim",
+        "name": "Social Network Simulator",
+        "descLink": "sn-sim.md",
+        "linkToRepo": "https://github.com/JopMolenaar/Meesterproef-SNSimulation",
+        "linkToWebsite": "https://jopmolenaar.github.io/Meesterproef-SNSimulation/",
+        "images": ["sns-meesterproef.jpeg"],
+        "usedSkills": ["Advanced JavaScript", "For a client", "Component based"],
+        "grade": "10",
+        "date": "30-06-2024",
+        "img": "snsMeesterproef.jpeg",
+        "imgAlt": "",
+        "littleDesc": ""
+    },
+    {
+        "dataName": "webAlert",
+        "name": "Web Alert",
+        "descLink": "web-alert.md",
+        "linkToRepo": "https://github.com/JopMolenaar/webAlert-extension",
+        "linkToWebsite": "jopmolenaar.github.io/webAlert-extension/",
+        "images": ["pwaChat.webp"],
+        "usedSkills": ["UX research", "web extensions", "User testing"],
         "grade": "8.5",
-        "date": "21-11-2023",
-        "img": "indCheckInDevice.png",
-        "imgAlt": "A photo of the device I made, it is a gray 3D printed case with an angled side towards you including a little screen, a place to put your card underneath that, a button in the bottom right corner and two leds, red and green, above the screen to show the status of your check in.",
-        "littleDesc": "I made a check in device at my minor Internet of Things on the HBO-ICT. I had no experience with embedded systems and many more things when starting this minor. But I managed to build an embedded system with a website where I could check the data. "
+        "date": "30-06-2025",
+        "img": "webAlert.jpeg",
+        "imgAlt": "",
+        "littleDesc": ""
     }
 ]

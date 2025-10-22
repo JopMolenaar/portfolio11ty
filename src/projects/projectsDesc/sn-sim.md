@@ -1,0 +1,5 @@
+I made this project with a team of two other persons for a client named ResponsibleIT, a research group based in the HvA.
+They researched the behaviour of a social network and wanted a simulator to show people how it works and why and how contentbubbles are created. 
+They had already build this simulator in phyton, but it did not work very well and the UI and UX were non existent. 
+Our job was to implement this logic in a intuative user interface so that the user would be more likely to understand what is going on. 
+

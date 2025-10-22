@@ -13,7 +13,7 @@
   }
 
   h2 {
-    color: #c2dede;
+    color: var(--heading-color);
     font-size: calc(1em + 10vw);
     grid-column: 1/2;
     transform: rotate(-5deg);

@@ -19,7 +19,7 @@ main {
         flex-direction: column;
         gap: 0.5em;
         h2 {
-          color: #c2dede;
+          color: var(--heading-color);
         }
         p {
           max-width: 40em;
@@ -61,7 +61,7 @@ main {
           place-self: center;
           transform: rotate(16deg);
           font-size: 27vw;
-          color: #c2dede;
+          color: var(--heading-color);
           opacity: 0.5;
           transform-origin: center;
         }

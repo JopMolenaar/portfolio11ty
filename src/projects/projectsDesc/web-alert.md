@@ -1,0 +1,3 @@
+Web Alert is a project that I did to graduate from my study CMD at the HvA. 
+The project is about protecting elderly more against online scams, and giving them more self-confidence on digital devices. 
+This idea to research and build something for this came from my own experiences, my social circle and newsarticles about this problem. 

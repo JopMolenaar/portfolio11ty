@@ -15,7 +15,7 @@ main > section.projects {
 
   h2 {
     font-size: calc(1em + 10vw);
-    color: #c2dede;
+    color: var(--heading-color);
     transform: rotate(-2deg);
     align-self: start;
     opacity: 0.8;
@@ -128,7 +128,10 @@ main > section.projects {
         > img {
           position: absolute;
           z-index: -1;
-          filter: brightness(60%);
+          filter: brightness(75%);
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
         }
 
         > div {
@@ -160,6 +163,7 @@ main > section.projects {
               font-size: 1.6em;
               margin-bottom: 1rem;
               width: fit-content;
+                text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
             }
             > p {
               font-size: 1rem;
@@ -171,7 +175,9 @@ main > section.projects {
                 width: 1.875rem;
                 height: 1.875rem;
                 min-height: 0;
-                background-color: white;
+                border-bottom: solid black 1px;
+                border-left: solid black 1px;
+                filter: invert(1);
                 border-radius: 50%;
                 padding: 0.15em;
                 transition: 200ms;
@@ -224,7 +230,9 @@ main > section.projects {
 
               li {
                 list-style: none;
-                background-color: rgb(57, 57, 57);
+                border: white solid 1px;
+                box-shadow: 0 4px 32px 0 rgb(31 38 135 / 34%), -1px 20px 6px 0 rgb(83 83 83 / 12%) inset;
+                backdrop-filter: blur(6px);
                 width: fit-content;
                 padding: 0.5rem;
                 border-radius: 10px;
@@ -321,11 +329,11 @@ main > section.projects {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   img {
     filter: brightness(90%);
   }
-}
+} */
 
 @keyframes fade-in-projects {
   from {

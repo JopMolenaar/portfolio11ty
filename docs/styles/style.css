@@ -39,8 +39,6 @@ html::-webkit-scrollbar {
 /* transparent track so page content shows behind it (if browser renders as overlay) */
 html::-webkit-scrollbar-track {
   background: transparent;
-  /* background-color: #c2dede; */
-  /* opacity: 0.2; */
 }
 
 /* the draggable bar */
@@ -84,6 +82,7 @@ html::-webkit-scrollbar-thumb:active {
   --color-div: rgb(0, 0, 0);
   --transparent: rgba(0, 0, 0, 0);
   --light-hover: rgba(255, 255, 255, 0.05);
+  --heading-color: #f2f2eb;
 }
 
 html {

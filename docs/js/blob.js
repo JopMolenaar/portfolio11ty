@@ -6,6 +6,15 @@ let cursorOffsetX = 0;
 let cursorOffsetY = 0;
 
 body.addEventListener("mousemove", (e) => {
+    // Only run if not a touch event
+    if (e.pointerType && e.pointerType !== "mouse") return;
+    if (e.sourceCapabilities && !e.sourceCapabilities.firesTouchEvents) {
+        // Modern browsers: only allow mouse
+    } else if (window.matchMedia("(pointer: coarse)").matches) {
+        // On touch devices, don't run
+        return;
+    }
+
     cursors.forEach((cursor) => {
         cursorOffsetY = e.clientY;
 
