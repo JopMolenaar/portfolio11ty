@@ -9,7 +9,7 @@ main > section.projects {
   background-color: var(--background-color);
   gap: 1em;
 
-/* TODO
+  /* TODO
 - MAAK EEN CLASS VOOR GROTE PROJECTEN, EENTJE DIE OOK OPZIJ SPANT, HIER MOET DE AFBEELDING ANDERS GEPOSITIONEERD ZIJN LIJKT WEL 
 - KLEINSTE CARD IS NU WAT KLEIN VOOR DE TEKST DIE ERIN STAAT. 
 */
@@ -25,6 +25,9 @@ main > section.projects {
 
   /* grid */
   > ul {
+    /* display: flex;
+flex-direction: column; */
+
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(23em, auto);
@@ -44,6 +47,7 @@ main > section.projects {
       }
     }
     > li {
+      /* height: 23em; */
       padding: 0em;
       list-style: none;
       width: 100%;
@@ -74,32 +78,34 @@ main > section.projects {
 
       &.enlarge {
         grid-row: span 2;
+        /* height: fit-content; */
+        /* min-height: 23em; */
 
         /* &.bigText{ */
-          /* grid-column: span 2; */
-          .content > div > div {
-            max-height: 83%;
-            overflow-y: scroll;
-            overflow-x: hidden;
-          }
-          .content > div > div::-webkit-scrollbar {
-            width: 6px;           
-          }
-          .content > div > div::-webkit-scrollbar-track {
-            background: transparent;
-          }
-          .content > div > div::-webkit-scrollbar-thumb {
-            background-color: #a7a7a7;
-            border-radius: 999px;
-            min-height: 30px;                    
-            border: 2px solid rgba(255,255,255,0.0); 
-            opacity: 0.6;                  
-          }
-          .content > div > div::-webkit-scrollbar-thumb:hover,
-          .content > div > div::-webkit-scrollbar-thumb:active {
-            background: rgba(255, 255, 255, 0.555);
-            opacity: 1;
-          }
+        /* grid-column: span 2; */
+        .content > div > div {
+          max-height: 83%;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+        .content > div > div::-webkit-scrollbar {
+          width: 6px;
+        }
+        .content > div > div::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .content > div > div::-webkit-scrollbar-thumb {
+          background-color: #a7a7a7;
+          border-radius: 999px;
+          min-height: 30px;
+          border: 2px solid rgba(255, 255, 255, 0);
+          opacity: 0.6;
+        }
+        .content > div > div::-webkit-scrollbar-thumb:hover,
+        .content > div > div::-webkit-scrollbar-thumb:active {
+          background: rgba(255, 255, 255, 0.555);
+          opacity: 1;
+        }
         /* } */
       }
 
@@ -117,7 +123,7 @@ main > section.projects {
             > p {
               display: block;
             }
-          } 
+          }
         }
       }
 
@@ -172,7 +178,7 @@ main > section.projects {
           pointer-events: none;
 
           & * {
-            pointer-events: auto; 
+            pointer-events: auto;
           }
 
           /* h3 , p's and prize */
@@ -189,7 +195,7 @@ main > section.projects {
               font-size: 1.6em;
               margin-bottom: 1rem;
               width: fit-content;
-              text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
             }
             > p {
               font-size: 1rem;
@@ -285,6 +291,32 @@ main > section.projects {
               width: fit-content;
               padding: 0.5rem;
               border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.no-grid-animation {
+  main > section.projects {
+    & > ul {
+      & > li {
+        max-height: 23.75em;
+        &.enlarge {
+          grid-row: span 1;
+          max-height: none;
+        }
+        &.content-active {
+          > .content > div {
+            > div {
+              position: static;
+              margin: 1.2rem 1.2rem 0rem 1.2rem;
+              max-height: none;
+            }
+            > section {
+              position: static;
             }
           }
         }

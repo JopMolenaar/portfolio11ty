@@ -8,12 +8,29 @@
 const grid = document.querySelector("section.projects > ul");
 const items = document.querySelectorAll("section.projects > ul > li");
 
-// wrapGrid returns helpers you can use (unwrapGrid, forceGridAnimation)
-const { unwrapGrid, forceGridAnimation } = animateCSSGrid.wrapGrid(grid, {
-  duration: 600, // ms
-  stagger: 60, // ms between items
-  easing: "easeInOut", // easing string from lib
-});
+const checkMq = (mq) => {
+  const body = document.querySelector("body");
+  if (mq.matches) {
+    if (body.classList.contains("no-grid-animation")) {
+      body.classList.remove("no-grid-animation");
+    }
+    // wrapGrid returns helpers you can use (unwrapGrid, forceGridAnimation)
+    const { unwrapGrid, forceGridAnimation } = animateCSSGrid.wrapGrid(grid, {
+      duration: 600, // ms
+      stagger: 60, // ms between items
+      easing: "easeInOut", // easing string from lib
+    });
+    console.log("mq", mq);
+  } else {
+    if (!body.classList.contains("no-grid-animation")) {
+      body.classList.add("no-grid-animation");
+    }
+    console.log("No grid animation");
+  }
+}
+
+let mq = window.matchMedia('(min-width: 1024px) and (pointer: fine)');
+checkMq(mq)
 
 items.forEach((item) => {
   const button = item.querySelector(".content button")

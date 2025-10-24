@@ -211,7 +211,7 @@ body.loading {
     animation: slideIn 1.5s forwards;
   }
   main section:not(.hello) {
-    * {
+    > * {
       opacity: 0;
       animation: slideUp 1.5s forwards;
     }
