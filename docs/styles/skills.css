@@ -1,0 +1,207 @@
+main {
+  > section.skills {
+    position: relative;
+    background-color: var(--background-color);
+    padding: 2rem;
+    padding-inline: 1rem;
+    padding-top: 4em;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3em;
+      max-width: 100vw;
+      width: 100%;
+      max-width: 110rem;
+
+      /* Text about experience */
+      > div:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        h2 {
+          color: var(--heading-color);
+        }
+        p {
+          max-width: 40em;
+          font-size: calc(0.8em + 0.6vw);
+        }
+        a {
+          color: var(--color-text);
+          &:hover {
+            text-decoration: none;
+            scale: 1.05;
+          }
+          svg {
+            width: 1.2em;
+            height: auto;
+            filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+            margin-left: 0.2em;
+            position: relative;
+            top: 0.2em;
+          }
+        }
+      }
+
+      /* Skill list */
+      > div:nth-of-type(2) {
+        display: grid;
+        padding-top: 3em;
+        padding: 1em;
+        padding-right: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+
+        /* The word skills */
+        h3 {
+          color: var(--color-text);
+          grid-column: 1/1;
+          grid-row: 1/1;
+          display: flex;
+          place-self: center;
+          transform: rotate(16deg);
+          font-size: 27vw;
+          color: var(--heading-color);
+          opacity: 0.5;
+          transform-origin: center;
+        }
+
+        > section {
+          grid-column: 1/1;
+          grid-row: 1/1;
+          margin-left: auto;
+          margin-right: auto;
+          transform: rotate(-16deg) translate(0%, 0%);
+          transform-origin: center;
+          overflow-x: hidden;
+          display: flex;
+          justify-content: center;
+          place-self: center;
+          flex-direction: column;
+          max-width: 34em;
+          width: 95%;
+
+          h4 {
+            color: var(--color-text);
+            margin-bottom: 1em;
+          }
+          p {
+            color: var(--color-text);
+            max-width: 40em;
+          }
+
+          .scroller {
+            padding: 0.25em;
+            width: 100%;
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.8em;
+              transform-style: preserve-3d;
+
+              li {
+                background-color: rgb(70 70 70 / 68%);
+                border-radius: 10%;
+                width: fit-content;
+                padding: 0.5em;
+                flex-wrap: nowrap;
+                font-size: 0.8em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+              }
+            }
+
+            &[data-animated="true"] {
+              padding: 0.5em;
+              -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+              mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+              ul{
+                flex-wrap: nowrap;
+                width: max-content;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 30em) {
+  main section.skills {
+    padding-inline: 2rem
+  }
+}
+@media (min-width: 34em) {
+  main > section.skills {
+    > div {
+      > div:nth-of-type(2) {
+        max-width: 80%;
+        align-self: end;
+        h3 {
+          font-size: 9em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 58em) {
+  main > section.skills {
+    > div {
+      flex-direction: row;
+      margin: 0 auto;
+
+      > div:nth-of-type(2) {
+        align-self: center;
+        > section {
+          .scroller {
+            ul li {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  main > section.skills {
+    padding-inline: 3.5rem;
+    > div {
+      > div:nth-of-type(1) {
+        p {
+          font-size: calc(1em + 0.3vw);
+        }
+      }
+      > div:nth-child(2) {
+        h3 {
+          font-size: 10em;
+        }
+        > section .scroller {
+          ul li {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroller[data-animated="true"] {
+    ul {
+      animation: scroll 25s forwards linear infinite;
+    }
+  }
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.4em));
+    }
+  }
+}

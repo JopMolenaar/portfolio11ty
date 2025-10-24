@@ -1,53 +1,92 @@
-main > section:nth-of-type(4) {
-  display: flex;
+main > .contact {
+  display: grid;
   flex-direction: column;
   align-items: center;
-  padding: 3em;
-  margin-bottom: 8em;
+  padding: 6em 1em 11em 1em;
+  background-color: var(--background-color);
+
+  @media (min-width: 40em) {
+    padding-inline: 2em;
+  }
+  h2 {
+    padding-bottom: 0.4em;
+    justify-self: center;
+    text-wrap: nowrap;
+    @media (min-width: 40em) {
+      scale: 0.6;
+      padding-bottom: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    background: none;
+    border: solid var(--heading-color) 2px;
+    padding: 1em;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: white;
+    transition: 200ms;
+    width: fit-content;
+    justify-self: center;
+    &:hover {
+      background-color: white;
+      color: black;
+      scale: 1.05;
+    }
+  }
+
+  /* form {
+    border-left: solid var(--color-gray) 4px;
+    border-bottom: solid var(--color-gray) 2px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40em;
+    align-content: space-between;
+    color: var(--color-text);
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5em;
+      font-size: 1.1em;
+
+      input {
+        height: 1.5em;
+        font-size: 1em;
+        margin-top: 0.5em;
+        padding: 0.2em;
+      }
+
+      textarea {
+        margin-top: 0.5em;
+        resize: none;
+      }
+    }
+
+    button {
+      all: unset;
+      border: 1px solid var(--color-gray);
+      text-align: center;
+      align-self: flex-end;
+      width: 7em;
+      margin: 0.5em;
+      margin-top: 3em;
+      padding: 0.4em;
+      transition: 200ms;
+
+      &:hover {
+        background-color: var(--color-gray);
+        color: var(--color-white);
+      }
+    }
+  } */
 }
-main > section:nth-of-type(4) h2 {
-  color: var(--color-text);
-  padding: 1.5em;
-}
-main > section:nth-of-type(4) form {
-  border-left: solid var(--color-gray) 4px;
-  border-bottom: solid var(--color-gray) 2px;
-  padding: 0.5em;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 40em;
-  align-content: space-between;
-  color: var(--color-text);
-}
-main > section:nth-of-type(4) form label {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em;
-  font-size: 1.1em;
-}
-main > section:nth-of-type(4) form label input {
-  height: 1.5em;
-  font-size: 1em;
-  margin-top: 0.5em;
-  padding: 0.2em;
-}
-main > section:nth-of-type(4) form label textarea {
-  margin-top: 0.5em;
-  resize: none;
-}
-main > section:nth-of-type(4) form button {
-  all: unset;
-  border: 1px solid var(--color-gray);
-  text-align: center;
-  align-self: flex-end;
-  width: 7em;
-  margin: 0.5em;
-  margin-top: 3em;
-  padding: 0.4em;
-  transition: 200ms;
-}
-main > section:nth-of-type(4) form button:hover {
-  background-color: var(--color-gray);
-  color: var(--color-white);
+
+body:has(.contact a:hover) {
+  .blob {
+    opacity: 0;
+  }
 }
