@@ -167,18 +167,24 @@ footer {
   background-color: var(--heading-color);
   filter: brightness(90%);
   color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 110rem;
+    margin: 0 auto;
+  }
 }
-footer div {
+footer div div {
   display: flex;
   gap: 1em;
 }
-footer div a {
+footer div div a {
   width: fit-content;
 }
-footer div a {
+footer div div a {
   img,
   svg {
     width: 1.8em;
@@ -187,7 +193,7 @@ footer div a {
     height: auto;
   }
 }
-footer div a:hover {
+footer div div a:hover {
   img,
   svg {
     scale: 1.1;
