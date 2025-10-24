@@ -9,29 +9,20 @@ main > section.projects {
   background-color: var(--background-color);
   gap: 1em;
 
-  /* TODO
-- MAAK EEN CLASS VOOR GROTE PROJECTEN, EENTJE DIE OOK OPZIJ SPANT, HIER MOET DE AFBEELDING ANDERS GEPOSITIONEERD ZIJN LIJKT WEL 
-- KLEINSTE CARD IS NU WAT KLEIN VOOR DE TEKST DIE ERIN STAAT. 
-*/
-
   h2 {
     transform: rotate(-2deg);
     align-self: start;
     max-width: 110rem;
     margin: 0 auto;
     width: 100%;
-    /* padding-bottom: 0.25em; */
   }
 
   /* grid */
   > ul {
-    /* display: flex;
-flex-direction: column; */
-
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(23em, auto);
-    gap: 1.5em;
+    gap: 0.8em;
     width: 100%;
     max-width: 110rem;
 
@@ -47,7 +38,6 @@ flex-direction: column; */
       }
     }
     > li {
-      /* height: 23em; */
       padding: 0em;
       list-style: none;
       width: 100%;
@@ -78,11 +68,6 @@ flex-direction: column; */
 
       &.enlarge {
         grid-row: span 2;
-        /* height: fit-content; */
-        /* min-height: 23em; */
-
-        /* &.bigText{ */
-        /* grid-column: span 2; */
         .content > div > div {
           max-height: 83%;
           overflow-y: auto;
@@ -106,7 +91,6 @@ flex-direction: column; */
           background: rgba(255, 255, 255, 0.555);
           opacity: 1;
         }
-        /* } */
       }
 
       /* A class that is given or removed while transitioning */
@@ -344,6 +328,7 @@ body.no-grid-animation {
     gap: 2em;
     > ul {
       grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+      gap: 1.5em;
     }
     > ul > li > .content {
       flex-direction: row;
@@ -385,12 +370,6 @@ body.no-grid-animation {
     }
   }
 }
-
-/* @media (prefers-color-scheme: dark) {
-  img {
-    filter: brightness(90%);
-  }
-} */
 
 @keyframes fade-in-projects {
   from {
