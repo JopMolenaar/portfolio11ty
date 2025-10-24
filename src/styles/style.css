@@ -83,6 +83,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  width: 100vw;
   &:has(body.loading){
     scroll-behavior: unset;
     overflow-y: hidden;
@@ -210,8 +211,10 @@ body.loading {
     animation: slideIn 1.5s forwards;
   }
   main section:not(.hello) {
-    opacity: 0;
-    animation: slideUp 1.5s forwards;
+    * {
+      opacity: 0;
+      animation: slideUp 1.5s forwards;
+    }
   }
   main section.hello {
     h1 {

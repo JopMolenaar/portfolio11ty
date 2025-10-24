@@ -7,7 +7,7 @@ main > section.projects {
   padding-inline: 1rem;
   padding-top: 6em;
   background-color: var(--background-color);
-  gap: 2em;
+  gap: 1em;
 
 /* TODO
 - MAAK EEN CLASS VOOR GROTE PROJECTEN, EENTJE DIE OOK OPZIJ SPANT, HIER MOET DE AFBEELDING ANDERS GEPOSITIONEERD ZIJN LIJKT WEL 
@@ -20,7 +20,7 @@ main > section.projects {
     max-width: 110rem;
     margin: 0 auto;
     width: 100%;
-    padding-bottom: 0.25em;
+    /* padding-bottom: 0.25em; */
   }
 
   /* grid */
@@ -75,11 +75,12 @@ main > section.projects {
       &.enlarge {
         grid-row: span 2;
 
-        &.bigText{
+        /* &.bigText{ */
           /* grid-column: span 2; */
           .content > div > div {
-            height: 83%;
+            max-height: 83%;
             overflow-y: scroll;
+            overflow-x: hidden;
           }
           .content > div > div::-webkit-scrollbar {
             width: 6px;           
@@ -99,7 +100,7 @@ main > section.projects {
             background: rgba(255, 255, 255, 0.555);
             opacity: 1;
           }
-        }
+        /* } */
       }
 
       /* A class that is given or removed while transitioning */
@@ -308,6 +309,7 @@ main > section.projects {
 
 @media (min-width: 50em) {
   main > section.projects {
+    gap: 2em;
     > ul {
       grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     }
@@ -343,6 +345,9 @@ main > section.projects {
 @media (min-width: 80em) {
   main > section.projects {
     padding-inline: 3.5rem;
+    h2 {
+      padding-bottom: 0.25em;
+    }
     > ul > li {
       font-size: calc(1em + 0.2vw);
     }
