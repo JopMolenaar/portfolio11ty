@@ -164,10 +164,16 @@ p span.highlight {
 
 footer {
   padding: 0.6em;
+  padding-inline: 1em;
   background-color: var(--heading-color);
   filter: brightness(90%);
   color: rgb(0, 0, 0);
-
+  @media (min-width: 30em) {
+    padding-inline: 2em;
+  }
+  @media (min-width: 80em) {
+    padding-inline: 3.5em;
+  }
 
   > div {
     display: flex;
@@ -175,28 +181,30 @@ footer {
     justify-content: space-between;
     max-width: 110rem;
     margin: 0 auto;
-  }
-}
-footer div div {
-  display: flex;
-  gap: 1em;
-}
-footer div div a {
-  width: fit-content;
-}
-footer div div a {
-  img,
-  svg {
-    width: 1.8em;
-    border-radius: 12%;
-    transition: 200ms;
-    height: auto;
-  }
-}
-footer div div a:hover {
-  img,
-  svg {
-    scale: 1.1;
+
+    > div {
+      display: flex;
+      gap: 1em;
+
+      a {
+        width: fit-content;
+
+        img,
+        svg {
+          width: 1.8em;
+          border-radius: 12%;
+          transition: 200ms;
+          height: auto;
+        }
+
+        &:hover {
+          img,
+          svg {
+            scale: 1.1;
+          }
+        }
+      }
+    }
   }
 }
 
