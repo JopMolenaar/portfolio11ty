@@ -120,7 +120,7 @@ age: age
     <h2>Projects</h2>
     <ul>
           <% projects.projects.forEach((content) => { %>
-            <li >
+            <li class="<%= content.bigText ? 'bigText' : '' %>">
                 <!-- Inner section -->
                 <div class="content">  
                     <!-- centered div to make the transition smooth -->

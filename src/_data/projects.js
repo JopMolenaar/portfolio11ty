@@ -120,6 +120,7 @@ module.exports = async function () {
                 imgAlt: item.imgAlt,
                 littleDesc: projectDescription,
                 prize: item.prize,
+                bigText: item.bigText
             });
         }
 

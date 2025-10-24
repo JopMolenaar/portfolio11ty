@@ -74,6 +74,32 @@ main > section.projects {
 
       &.enlarge {
         grid-row: span 2;
+
+        &.bigText{
+          /* grid-column: span 2; */
+          .content > div > div {
+            height: 83%;
+            overflow-y: scroll;
+          }
+          .content > div > div::-webkit-scrollbar {
+            width: 6px;           
+          }
+          .content > div > div::-webkit-scrollbar-track {
+            background: transparent;
+          }
+          .content > div > div::-webkit-scrollbar-thumb {
+            background-color: #a7a7a7;
+            border-radius: 999px;
+            min-height: 30px;                    
+            border: 2px solid rgba(255,255,255,0.0); 
+            opacity: 0.6;                  
+          }
+          .content > div > div::-webkit-scrollbar-thumb:hover,
+          .content > div > div::-webkit-scrollbar-thumb:active {
+            background: rgba(255, 255, 255, 0.555);
+            opacity: 1;
+          }
+        }
       }
 
       /* A class that is given or removed while transitioning */
@@ -85,9 +111,12 @@ main > section.projects {
         > .content > div {
           max-width: none;
 
-          > div > p {
-            display: block;
-          }
+          > div {
+            padding-right: 0.25em;
+            > p {
+              display: block;
+            }
+          } 
         }
       }
 
@@ -145,7 +174,7 @@ main > section.projects {
             pointer-events: auto; 
           }
 
-          /* h3 and prize */
+          /* h3 , p's and prize */
           > div {
             display: grid;
             grid-template-columns: 1fr 1.5em;
@@ -159,7 +188,7 @@ main > section.projects {
               font-size: 1.6em;
               margin-bottom: 1rem;
               width: fit-content;
-                text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+              text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
             }
             > p {
               font-size: 1rem;

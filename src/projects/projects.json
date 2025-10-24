@@ -12,6 +12,7 @@
         "img": "enclosureWithWebsite.webp",
         "imgAlt": "A photo of the device we made, it is a white 3D printed case with a card slot on the front, a square on the top that is lighten up with blue leds, and an angled screen behind that to show the event details.",
         "littleDesc": "",
+        "bigText": false,
         "prize": "At the end of the 9 weeks we had an expo where we won the `Best business opportunity` out of all projects from all minors and masters at the HBO-ICT."
     },
     {
@@ -26,7 +27,8 @@
         "date": "20-03-2024",
         "img": "ufoCockpit.webp",
         "imgAlt": "A picture of the website that looks like that you are in a UFO in space.",
-        "littleDesc": "This project was about learning and discovering the true power of CSS by only using css selectors and no Javascript."
+        "littleDesc": "This project was about learning and discovering the true power of CSS by only using css selectors and no Javascript.",
+        "bigText": false
     },
     {
         "dataName": "cssDayTa",
@@ -40,6 +42,7 @@
         "img": "cssDayTaMockup.webp",
         "imgAlt": "A picture of the website on three different devices.",
         "littleDesc": "",
+        "bigText": false,
         "prize": "This website is made in a hackathon where we competed against other groups. The judges were Peter Paul Koch and Krijn Hoetmer. Ultimately, our team won the hackathon, earning free tickets to CSS Day along with another group."
     },
     {
@@ -54,7 +57,8 @@
         "date": "26-04-2024",
         "img": "pwaChat.webp",
         "imgAlt": "",
-        "littleDesc": ""
+        "littleDesc": "",
+        "bigText": false
     },
     {
         "dataName": "snsSim",
@@ -63,12 +67,13 @@
         "linkToRepo": "https://github.com/JopMolenaar/Meesterproef-SNSimulation",
         "linkToWebsite": "https://jopmolenaar.github.io/Meesterproef-SNSimulation/",
         "images": ["sns-meesterproef.jpeg"],
-        "usedSkills": ["Advanced JavaScript", "For a client", "Component based"],
+        "usedSkills": ["Advanced JavaScript", "For a client", "Object oriented programming"],
         "grade": "10",
         "date": "30-06-2024",
         "img": "snsMeesterproef.jpeg",
         "imgAlt": "",
-        "littleDesc": ""
+        "littleDesc": "",
+        "bigText": true
     },
     {
         "dataName": "webAlert",
@@ -82,6 +87,7 @@
         "date": "30-06-2025",
         "img": "webAlert.jpeg",
         "imgAlt": "",
-        "littleDesc": ""
+        "littleDesc": "",
+        "bigText": true
     }
 ]
