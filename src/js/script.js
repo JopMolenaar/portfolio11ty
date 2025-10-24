@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loading");
     setTimeout(() => {
     document.body.classList.remove("loading");
-    }, 1000);
+    }, 1500);
   } else {
     document.body.classList.remove("loading");
   }
