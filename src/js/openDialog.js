@@ -30,7 +30,10 @@ const checkMq = (mq) => {
 }
 
 let mq = window.matchMedia('(min-width: 1024px) and (pointer: fine)');
-checkMq(mq)
+
+let resizeMq = window.matchMedia('(min-width: 515px)');
+checkMq(resizeMq);
+resizeMq.addEventListener('change', checkMq);
 
 items.forEach((item) => {
   const button = item.querySelector(".content button")

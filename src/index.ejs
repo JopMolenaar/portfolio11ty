@@ -4,7 +4,7 @@ title: My Eleventy Portfolio
 age: age
 ---
 
-<main>
+
   <section class="hello">
     <div>
         <h1>
@@ -142,19 +142,11 @@ age: age
                                 <% content.usedSkills.forEach((skill) => { %>
                                     <li><%- skill %></li>
                                 <% }); %>
+                                <% if (content.linkToRepo) { %>
+                                    <li><a target="_blank" href="<%- content.linkToRepo %>">Github repo</a></li>
+                                <% } %>
                             </ul>
                         </section>
-                        <section>
-                            <h4 class="visually-hidden">More info:</h4>
-                            <% if (content.linkToRepo) { %>
-                                <a target="_blank" href="<%- content.linkToRepo %>">Github repo</a>
-                            <% } %>
-                            <!-- <% if (content.grade) { %>
-                                <p>Grade: <span><%= content.grade %></span></p>
-                            <% } %> -->
-                            <!-- <p><span class="visually-hidden">Date: </span><%= content.date %></p> -->
-                        </section>
-                     
                     </div>
                     <img
                         src="images/projects/<%= content.img %>"
@@ -184,4 +176,4 @@ age: age
         <button type="submit">Send</button>
     </form>  -->
 </section>
-</main>
+

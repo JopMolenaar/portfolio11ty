@@ -237,6 +237,7 @@ main > section.projects {
             width: fit-content;
             font-size: 1rem;
             pointer-events: none;
+            display: flex;
 
             ul {
               display: flex;
@@ -252,29 +253,10 @@ main > section.projects {
                 width: fit-content;
                 padding: 0.5rem;
                 border-radius: 10px;
+                a {
+                  color: var(--color-text);
+                }
               }
-            }
-          }
-          section:nth-of-type(2) {
-            display: none;
-            padding-top: 1em;
-            margin-top: auto;
-            justify-content: start;
-            gap: 1em;
-            flex-wrap: wrap;
-
-            * {
-              margin: 0;
-              align-content: center;
-              margin-bottom: 0.5rem;
-              text-wrap: nowrap;
-            }
-            a {
-              color: var(--color-text);
-              background-color: rgb(66, 66, 66);
-              width: fit-content;
-              padding: 0.5rem;
-              border-radius: 10px;
             }
           }
         }
