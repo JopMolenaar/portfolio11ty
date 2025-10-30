@@ -253,6 +253,7 @@ main > section.projects {
                 width: fit-content;
                 padding: 0.5rem;
                 border-radius: 10px;
+                background: #00000008;
                 a {
                   color: var(--color-text);
                 }
